@@ -15,14 +15,20 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="chineseField" destination="u9m-IN-V4p" id="OH4-53-Ppy"/>
                 <outlet property="commandTextField" destination="uMP-L5-Jvs" id="NxX-gx-rjq"/>
+                <outlet property="dingField" destination="LvU-UY-vcG" id="W7v-P6-LJr"/>
+                <outlet property="englishField" destination="KYg-pR-rMk" id="qOZ-uc-6Gq"/>
                 <outlet property="exitStatusTextField" destination="0Dj-1l-ffa" id="83A-Fr-mHz"/>
                 <outlet property="icon1024" destination="qKY-fz-YKh" id="xqL-6H-8N7"/>
                 <outlet property="logo" destination="1qZ-JX-Osu" id="m8M-cB-b6t"/>
+                <outlet property="oemButton" destination="k59-Km-BIZ" id="eag-9v-QTj"/>
                 <outlet property="outputTextField" destination="Ied-BF-cE1" id="gNg-AJ-mhL"/>
                 <outlet property="projectField" destination="nTN-pv-O8G" id="W9w-Wd-fbC"/>
                 <outlet property="settingField" destination="3i9-eS-0ix" id="2uH-br-2hb"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="wxButton" destination="4hd-a8-nZx" id="67b-sj-xgQ"/>
+                <outlet property="wxField" destination="hbL-v7-d7X" id="0N0-Ef-ml3"/>
             </connections>
         </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">

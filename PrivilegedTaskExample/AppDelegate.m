@@ -37,6 +37,13 @@
 @property (nonatomic,weak)IBOutlet NSImageView*icon1024;
 @property (nonatomic,weak)IBOutlet NSImageView*logo;
 
+@property (nonatomic,weak)IBOutlet NSTextField*englishField;
+@property (nonatomic,weak)IBOutlet NSTextField*chineseField;
+@property (nonatomic,weak)IBOutlet NSTextField*wxField;
+@property (nonatomic,weak)IBOutlet NSTextField*dingField;
+@property (nonatomic,weak)IBOutlet NSButton*wxButton;
+@property (nonatomic,weak)IBOutlet NSButton*oemButton;
+
 @end
 
 @implementation AppDelegate
@@ -63,6 +70,24 @@
 }
 -(void)getDataAndShow{
     if (_projectPath != nil || _projectPath.length > 0) {
+        NSString *infoPath = [_projectPath stringByAppendingString:@"/Cloudoc2/Info.plist"];
+        NSMutableDictionary *info = [NSMutableDictionary dictionaryWithContentsOfFile:infoPath];
+        NSLog(@"%@ %@",info,info[@"CFBundleURLTypes"]);
+        
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"CFBundleURLName = weixin"];
+        NSMutableArray*array = info[@"CFBundleURLTypes"];
+        for (NSMutableDictionary *dict in array) {
+            NSString *value=dict[@"CFBundleURLName"];
+            if ([value isEqualToString:@"weixin"]) {
+                [dict setObject:@[@"CFBundleURLSchemes"] forKey:@"CFBundleURLSchemes"];
+            }
+        }
+        NSLog(@"%@",info);
+        
+        if (_settingPath != nil || _settingPath.length > 0) {
+            [info writeToFile:[_settingPath stringByAppendingPathComponent:@"Info.plist"]atomically:YES];
+            
+        }
     
     }
     if (_settingPath != nil || _settingPath.length > 0) {
