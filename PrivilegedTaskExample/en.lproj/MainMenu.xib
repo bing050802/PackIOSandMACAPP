@@ -17,7 +17,11 @@
             <connections>
                 <outlet property="commandTextField" destination="uMP-L5-Jvs" id="NxX-gx-rjq"/>
                 <outlet property="exitStatusTextField" destination="0Dj-1l-ffa" id="83A-Fr-mHz"/>
+                <outlet property="icon1024" destination="qKY-fz-YKh" id="xqL-6H-8N7"/>
+                <outlet property="logo" destination="1qZ-JX-Osu" id="m8M-cB-b6t"/>
                 <outlet property="outputTextField" destination="Ied-BF-cE1" id="gNg-AJ-mhL"/>
+                <outlet property="projectField" destination="nTN-pv-O8G" id="W9w-Wd-fbC"/>
+                <outlet property="settingField" destination="3i9-eS-0ix" id="2uH-br-2hb"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -472,7 +476,7 @@ DQ
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="runNSTask:" target="Voe-Tx-rLC" id="TJg-2k-XtA"/>
+                            <action selector="selectBtnClick:" target="Voe-Tx-rLC" id="Gzv-Cl-nAS"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" misplaced="YES" tag="2" id="3lc-cG-Amd">
@@ -483,7 +487,7 @@ DQ
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="runNSTask:" target="Voe-Tx-rLC" id="mZ5-BX-QTs"/>
+                            <action selector="selectBtnClick:" target="Voe-Tx-rLC" id="irh-Hl-KiN"/>
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="x1N-hZ-8Z5">

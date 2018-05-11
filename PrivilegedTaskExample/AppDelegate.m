@@ -28,14 +28,81 @@
 
 #import "AppDelegate.h"
 #import "STPrivilegedTask.h"
+@interface AppDelegate()
+@property (nonatomic,strong)NSString*settingPath;
+@property (nonatomic,strong)NSString*projectPath;
+@property (nonatomic,weak)IBOutlet  NSTextField*settingField;
+@property (nonatomic,weak)IBOutlet NSTextField*projectField;
+
+@property (nonatomic,weak)IBOutlet NSImageView*icon1024;
+@property (nonatomic,weak)IBOutlet NSImageView*logo;
+
+@end
 
 @implementation AppDelegate
 
 - (IBAction)selectBtnClick:(id)sender {
     NSInteger tag = [sender tag];
+    if (tag == 1) {
+        [self selectPath:^(NSString *path) {
+            _settingPath = path;
+            _settingField.stringValue = _settingPath;
+                 [self getDataAndShow];
+        }];
+    }
+    
+    if (tag == 2) {
+        [self selectPath:^(NSString *path) {
+            _projectPath = path;
+            _projectField.stringValue = _projectPath;
+            [self getDataAndShow];
+        }];
+    }
     
     
 }
+-(void)getDataAndShow{
+    if (_projectPath != nil || _projectPath.length > 0) {
+    
+    }
+    if (_settingPath != nil || _settingPath.length > 0) {
+        NSImage *image1 = [[NSImage alloc]initWithContentsOfFile:[_settingPath stringByAppendingPathComponent:@"cloud_ico.png"]];
+        _icon1024.image = image1;
+        
+        _logo.image=[[NSImage alloc]initWithContentsOfFile:[_settingPath stringByAppendingPathComponent:@"logo@3x.png"]];
+    }
+}
+
+-(void)selectPath:(void(^)(NSString *path))callback{
+    NSOpenPanel* panel = [NSOpenPanel openPanel];
+    __weak typeof(self)weakSelf = self;
+    //是否可以创建文件夹
+    panel.canCreateDirectories = YES;
+    //是否可以选择文件夹
+    panel.canChooseDirectories = YES;
+    //是否可以选择文件
+    panel.canChooseFiles = NO;
+    
+    //是否可以多选
+    [panel setAllowsMultipleSelection:NO];
+    
+    //显示
+    [panel beginSheetModalForWindow:self.window completionHandler:^(NSInteger result) {
+        
+        //是否点击open 按钮
+        if (result == NSModalResponseOK) {
+            //NSURL *pathUrl = [panel URL];
+            NSString *pathString = [panel.URLs.firstObject path];
+            if (callback) {
+                callback(pathString);
+            }
+        }
+        
+        
+    }];
+    
+}
+
 
 - (IBAction)runNSTask:(id)sender {
     
