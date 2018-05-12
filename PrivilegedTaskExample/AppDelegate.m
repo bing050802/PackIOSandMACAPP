@@ -28,6 +28,26 @@
 
 #import "AppDelegate.h"
 #import "STPrivilegedTask.h"
+typedef NS_OPTIONS(NSUInteger, YHZConfigKey) {
+    YHZConfig_Chinese = 101,
+    YHZConfig_English = 102,
+    YHZConfig_weixin = 103,
+    YHZConfig_dingding = 104,
+    YHZConfig_WXorDing = 105,
+    YHZConfig_OEMorNor = 106,
+    YHZConfig_InorOverseas = 107,
+    YHZConfig_Version = 108,
+    YHZConfig_Copyright = 109,
+};
+
+NSString*YHZConfig(YHZConfigKey key ){
+    NSArray *array = @[@"YHZConfig_Chinese",@"YHZConfig_English",@"YHZConfig_weixin",@"YHZConfig_dingding",@"YHZConfig_WXorDing",@"YHZConfig_OEMorNor",@"YHZConfig_InorOverseas",@"YHZConfig_Version",@"YHZConfig_Copyright"];
+    return array[key - 101];
+    
+};
+
+
+
 @interface AppDelegate()
 @property (nonatomic,strong)NSString*settingPath;
 @property (nonatomic,strong)NSString*projectPath;
@@ -41,9 +61,11 @@
 @property (nonatomic,weak)IBOutlet NSTextField*chineseField;
 @property (nonatomic,weak)IBOutlet NSTextField*wxField;
 @property (nonatomic,weak)IBOutlet NSTextField*dingField;
-@property (nonatomic,weak)IBOutlet NSButton*wxButton;
-@property (nonatomic,weak)IBOutlet NSButton*oemButton;
-
+@property (nonatomic,weak)IBOutlet NSSegmentedControl*wxSegment;
+@property (nonatomic,weak)IBOutlet NSSegmentedControl*oemSegment;
+@property (nonatomic,weak)IBOutlet NSSegmentedControl*innerSegment;
+@property (nonatomic,weak)IBOutlet NSTextField *versionField;
+@property (nonatomic,weak)IBOutlet NSTextField *copyrightField;
 @end
 
 @implementation AppDelegate
@@ -67,30 +89,127 @@
     }
     
     
+    if (tag == 3) {
+        [self outputSetting];
+    }
+    
+    
 }
--(void)getDataAndShow{
-    if (_projectPath != nil || _projectPath.length > 0) {
-        NSString *infoPath = [_projectPath stringByAppendingString:@"/Cloudoc2/Info.plist"];
-        NSMutableDictionary *info = [NSMutableDictionary dictionaryWithContentsOfFile:infoPath];
-        NSLog(@"%@ %@",info,info[@"CFBundleURLTypes"]);
+-(void)outputSetting{
+    NSString*setting =   [_settingPath stringByAppendingPathComponent:@"setting.plist"];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+        [dict setObject:_chineseField.stringValue forKey:YHZConfig(_chineseField.tag)];
+      [dict setObject:_englishField.stringValue forKey:YHZConfig(_englishField.tag)];
+      [dict setObject:_wxField.stringValue forKey:YHZConfig(_wxField.tag)];
+      [dict setObject:_dingField.stringValue forKey:YHZConfig(_dingField.tag)];
+    
+      [dict setObject:@(_wxSegment.selectedSegment) forKey:YHZConfig(_wxSegment.tag)];
+      [dict setObject:@(_oemSegment.selectedSegment) forKey:YHZConfig(_oemSegment.tag)];
+      [dict setObject:@(_innerSegment.selectedSegment) forKey:YHZConfig(_innerSegment.tag)];
+    
+
+      [dict setObject:_versionField.stringValue forKey:YHZConfig(_versionField.tag)];
+      [dict setObject:_copyrightField.stringValue forKey:YHZConfig(_copyrightField.tag)];
+    
+    [dict writeToFile:setting atomically:yearMask];
+     NSString *infoPath = [_settingPath stringByAppendingPathComponent:@"Info.plist"];
+    
+    if (![[NSFileManager defaultManager]fileExistsAtPath:infoPath]) {
+        NSError *copyError;
+         NSString *infoPath1 = [_projectPath stringByAppendingString:@"/Cloudoc2/Info.plist"];
+        [[NSFileManager defaultManager]copyItemAtPath:infoPath1 toPath:infoPath error:&copyError];
         
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"CFBundleURLName = weixin"];
-        NSMutableArray*array = info[@"CFBundleURLTypes"];
-        for (NSMutableDictionary *dict in array) {
-            NSString *value=dict[@"CFBundleURLName"];
-            if ([value isEqualToString:@"weixin"]) {
-                [dict setObject:@[@"CFBundleURLSchemes"] forKey:@"CFBundleURLSchemes"];
+        NSLog(@"%@",copyError);
+    }
+    
+   
+    NSMutableDictionary *info = [NSMutableDictionary dictionaryWithContentsOfFile:infoPath];
+    NSMutableArray*array = info[@"CFBundleURLTypes"];
+    
+    [info setObject:_versionField.stringValue forKey:@"CFBundleShortVersionString"];
+    for (NSMutableDictionary *dict in array) {
+        NSString *value=dict[@"CFBundleURLName"];
+        if ([value isEqualToString:@"weixin"]) {
+            [dict setObject:@[_wxField.stringValue] forKey:@"CFBundleURLSchemes"];
+        }
+        if ([value isEqualToString:@"dingtalk"]) {
+            [dict setObject:@[_dingField.stringValue] forKey:@"CFBundleURLSchemes"];
+        }
+        
+    }
+    NSLog(@"%@",info);
+    
+    
+    [info writeToFile:infoPath atomically:YES];
+        
+    
+    
+    
+}
+-(void)showSettingInfoZ{
+    NSString*settingPath =   [_settingPath stringByAppendingPathComponent:@"setting.plist"];
+    if ([[NSFileManager defaultManager]fileExistsAtPath:settingPath]) {
+        NSMutableDictionary *settingDict = [NSMutableDictionary dictionaryWithContentsOfFile:settingPath];
+        _chineseField.stringValue = settingDict[YHZConfig(_chineseField.tag)];
+        _englishField.stringValue = settingDict[YHZConfig(_englishField.tag)];
+        _wxField.stringValue = settingDict[YHZConfig(_wxField.tag)];
+        _dingField.stringValue = settingDict[YHZConfig(_dingField.tag)];
+        _versionField.stringValue = settingDict[YHZConfig(_versionField.tag)];
+        _copyrightField.stringValue = settingDict[YHZConfig(_copyrightField.tag)];
+        
+        [_wxSegment setSelectedSegment:[settingDict[YHZConfig(_chineseField.tag) ]integerValue]];
+        [_oemSegment setSelectedSegment:[settingDict[YHZConfig(_oemSegment.tag) ]integerValue]];
+        [_innerSegment setSelectedSegment:[settingDict[YHZConfig(_innerSegment.tag) ]integerValue]];
+    }
+    
+}
+
+-(void)getDataAndShow{
+    if ((_projectPath != nil && _projectPath.length > 0)&&(_settingPath != nil && _settingPath.length > 0)) {
+        NSString*settingPath =   [_settingPath stringByAppendingPathComponent:@"setting.plist"];
+        if ([[NSFileManager defaultManager]fileExistsAtPath:settingPath]) {
+            NSMutableDictionary *settingDict = [NSMutableDictionary dictionaryWithContentsOfFile:settingPath];
+                _chineseField.stringValue = settingDict[YHZConfig(_chineseField.tag)];
+               _englishField.stringValue = settingDict[YHZConfig(_englishField.tag)];
+               _wxField.stringValue = settingDict[YHZConfig(_wxField.tag)];
+               _dingField.stringValue = settingDict[YHZConfig(_dingField.tag)];
+               _versionField.stringValue = settingDict[YHZConfig(_versionField.tag)];
+               _copyrightField.stringValue = settingDict[YHZConfig(_copyrightField.tag)];
+            
+               [_wxSegment setSelectedSegment:[settingDict[YHZConfig(_chineseField.tag) ]integerValue]];
+               [_oemSegment setSelectedSegment:[settingDict[YHZConfig(_oemSegment.tag) ]integerValue]];
+                [_innerSegment setSelectedSegment:[settingDict[YHZConfig(_innerSegment.tag) ]integerValue]];
+        }else{
+            
+            NSString *infoPath = [_projectPath stringByAppendingString:@"/Cloudoc2/Info.plist"];
+            NSMutableDictionary *info = [NSMutableDictionary dictionaryWithContentsOfFile:infoPath];
+            NSMutableArray*array = info[@"CFBundleURLTypes"];
+            _versionField.stringValue = info[@"CFBundleShortVersionString"];
+            for (NSMutableDictionary *dict in array) {
+                NSString *value=dict[@"CFBundleURLName"];
+                if ([value isEqualToString:@"weixin"]) {
+                    _wxField.stringValue = [dict[@"CFBundleURLSchemes"]firstObject];
+                    
+                }
+                if ([value isEqualToString:@"dingtalk"]) {
+                    _dingField.stringValue =[dict[@"CFBundleURLSchemes"]firstObject];
+                }
+                
+                
+            }
+            
+            
+            
+            
+            if (_settingPath != nil || _settingPath.length > 0) {
+                [info writeToFile:[_settingPath stringByAppendingPathComponent:@"Info.plist"]atomically:YES];
+                
             }
         }
-        NSLog(@"%@",info);
         
-        if (_settingPath != nil || _settingPath.length > 0) {
-            [info writeToFile:[_settingPath stringByAppendingPathComponent:@"Info.plist"]atomically:YES];
-            
-        }
+   
     
-    }
-    if (_settingPath != nil || _settingPath.length > 0) {
+
         NSImage *image1 = [[NSImage alloc]initWithContentsOfFile:[_settingPath stringByAppendingPathComponent:@"cloud_ico.png"]];
         _icon1024.image = image1;
         
