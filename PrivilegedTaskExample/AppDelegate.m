@@ -163,7 +163,8 @@ NSString*YHZConfig(YHZConfigKey key ){
             [dict setObject:@[_dingField.stringValue] forKey:@"CFBundleURLSchemes"];
         }
         if ([value isEqualToString:@"tencent"]) {
-            [dict setObject:@[_qqField.stringValue] forKey:@"CFBundleURLSchemes"];
+            NSString *str= [NSString stringWithFormat:@"tencent%@",_qqField.stringValue];
+            [dict setObject:@[str] forKey:@"CFBundleURLSchemes"];
         }
         
     }
