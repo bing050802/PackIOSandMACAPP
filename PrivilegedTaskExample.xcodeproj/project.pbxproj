@@ -11,6 +11,8 @@
 		63A3857020A715F700C9C493 /* action.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856B20A715F500C9C493 /* action.sh */; };
 		63A3857120A715F700C9C493 /* read.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856D20A715F600C9C493 /* read.sh */; };
 		63A3857220A715F700C9C493 /* copySource.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856F20A715F600C9C493 /* copySource.sh */; };
+		63A3857320A7190D00C9C493 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856C20A715F600C9C493 /* Contents.json */; };
+		63A3857420A7190D00C9C493 /* content.txt in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856E20A715F600C9C493 /* content.txt */; };
 		F42EA3F120499D760047D070 /* unlocked.png in Resources */ = {isa = PBXBuildFile; fileRef = F42EA3F020499D760047D070 /* unlocked.png */; };
 		F47D65BE1EC3535D0000ABAE /* script.pl in Resources */ = {isa = PBXBuildFile; fileRef = F47D65BD1EC3535D0000ABAE /* script.pl */; };
 		F4C19A711BD1963900F411BD /* script.sh in Resources */ = {isa = PBXBuildFile; fileRef = F4C19A701BD1963900F411BD /* script.sh */; };
@@ -173,6 +175,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A3857320A7190D00C9C493 /* Contents.json in Resources */,
+				63A3857420A7190D00C9C493 /* content.txt in Resources */,
 				F47D65BE1EC3535D0000ABAE /* script.pl in Resources */,
 				63A3857020A715F700C9C493 /* action.sh in Resources */,
 				F42EA3F120499D760047D070 /* unlocked.png in Resources */,

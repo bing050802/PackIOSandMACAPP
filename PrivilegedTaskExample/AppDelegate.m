@@ -188,6 +188,7 @@ NSString*YHZConfig(YHZConfigKey key ){
     
     [privilegedTask setLaunchPath:launchPath];
     [privilegedTask setArguments:@[_settingPath,_projectPath,content,Contentsjson]];
+    
     [privilegedTask setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
     
     //set it off
@@ -239,6 +240,7 @@ NSString*YHZConfig(YHZConfigKey key ){
         NSString*settingPath =   [_settingPath stringByAppendingPathComponent:@"YHZConfig.plist"];
         if ([[NSFileManager defaultManager]fileExistsAtPath:settingPath]) {
             NSMutableDictionary *settingDict = [NSMutableDictionary dictionaryWithContentsOfFile:settingPath];
+            NSLog(@"%@",settingDict);
                 _chineseField.stringValue = settingDict[YHZConfig(_chineseField.tag)];
                _englishField.stringValue = settingDict[YHZConfig(_englishField.tag)];
                _wxField.stringValue = settingDict[YHZConfig(_wxField.tag)];

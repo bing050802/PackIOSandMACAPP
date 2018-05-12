@@ -16,7 +16,10 @@ copyIconsToProject(){
 copyappiconset(){
     local sourcePath=$1
     local distinationPath=$2
-    copy -f $sourcePath $distinationPath
+
+    app_icon_dpath=$PROJECTPATH'/Cloudoc2/NEWYHZ.xcassets/AppIcon_2.appiconset'
+    rm -rf $app_icon_dpath
+    cp -rf $imagePath $imageDistinationPath
 }
 
 
@@ -27,7 +30,7 @@ main(){
     imagePath=$SETTINGPATH/AppIcon_2.appiconset
     imageDistinationPath=$PROJECTPATH/Cloudoc2/NEWYHZ.xcassets
 
-    app_icon_dpath=$PROJECTPATH'/Cloudoc2/NEWYHZ.xcassets/AppIcon_2.appiconset/'
+    app_icon_dpath=$PROJECTPATH'/Cloudoc2/NEWYHZ.xcassets/AppIcon_2.appiconset'
     chmod 777 $app_icon_dpath
     rm -rf $app_icon_dpath
     cp -rf $imagePath $imageDistinationPath
