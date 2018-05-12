@@ -38,10 +38,11 @@ typedef NS_OPTIONS(NSUInteger, YHZConfigKey) {
     YHZConfig_InorOverseas = 107,
     YHZConfig_Version = 108,
     YHZConfig_Copyright = 109,
+    YHZConfig_qq = 110,
 };
 
 NSString*YHZConfig(YHZConfigKey key ){
-    NSArray *array = @[@"YHZConfig_Chinese",@"YHZConfig_English",@"YHZConfig_weixin",@"YHZConfig_dingding",@"YHZConfig_WXorDing",@"YHZConfig_OEMorNor",@"YHZConfig_InorOverseas",@"YHZConfig_Version",@"YHZConfig_Copyright"];
+    NSArray *array = @[@"YHZConfig_Chinese",@"YHZConfig_English",@"YHZConfig_weixin",@"YHZConfig_dingding",@"YHZConfig_WXorDing",@"YHZConfig_OEMorNor",@"YHZConfig_InorOverseas",@"YHZConfig_Version",@"YHZConfig_Copyright",@"YHZConfig_qq"];
     return array[key - 101];
     
 };
@@ -66,6 +67,7 @@ NSString*YHZConfig(YHZConfigKey key ){
 @property (nonatomic,weak)IBOutlet NSSegmentedControl*innerSegment;
 @property (nonatomic,weak)IBOutlet NSTextField *versionField;
 @property (nonatomic,weak)IBOutlet NSTextField *copyrightField;
+@property (nonatomic,weak)IBOutlet NSTextField *qqField;
 @end
 
 @implementation AppDelegate
@@ -93,10 +95,33 @@ NSString*YHZConfig(YHZConfigKey key ){
         [self outputSetting];
     }
     
+    if(tag == 4){
+        [self reset];
+        
+    }
+    
+}
+-(void)reset{
+    _settingPath = nil;
+    _projectPath = nil;
+    _settingField.stringValue= @"";
+    _projectField.stringValue=@"";
+//    _chineseField.stringValue = @"";;
+//    _englishField.stringValue = @"";
+    _wxField.stringValue = @"";
+    _dingField.stringValue = @"";
+    _versionField.stringValue = @"";
+//    _copyrightField.stringValue = @"";
+    _qqField.stringValue = @"";
+    
+    [_wxSegment setSelectedSegment:0];
+    [_oemSegment setSelectedSegment:0];
+    [_innerSegment setSelectedSegment:0];
+    
     
 }
 -(void)outputSetting{
-    NSString*setting =   [_settingPath stringByAppendingPathComponent:@"setting.plist"];
+    NSString*setting =   [_settingPath stringByAppendingPathComponent:@"YHZConfig.plist"];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
         [dict setObject:_chineseField.stringValue forKey:YHZConfig(_chineseField.tag)];
       [dict setObject:_englishField.stringValue forKey:YHZConfig(_englishField.tag)];
@@ -110,8 +135,9 @@ NSString*YHZConfig(YHZConfigKey key ){
 
       [dict setObject:_versionField.stringValue forKey:YHZConfig(_versionField.tag)];
       [dict setObject:_copyrightField.stringValue forKey:YHZConfig(_copyrightField.tag)];
+      [dict setObject:@"1106228075" forKey:YHZConfig(110)];
     
-    [dict writeToFile:setting atomically:yearMask];
+        [dict writeToFile:setting atomically:YES];
      NSString *infoPath = [_settingPath stringByAppendingPathComponent:@"Info.plist"];
     
     if (![[NSFileManager defaultManager]fileExistsAtPath:infoPath]) {
@@ -127,6 +153,7 @@ NSString*YHZConfig(YHZConfigKey key ){
     NSMutableArray*array = info[@"CFBundleURLTypes"];
     
     [info setObject:_versionField.stringValue forKey:@"CFBundleShortVersionString"];
+    [info setObject:_versionField.stringValue forKey:@"CFBundleVersion"];
     for (NSMutableDictionary *dict in array) {
         NSString *value=dict[@"CFBundleURLName"];
         if ([value isEqualToString:@"weixin"]) {
@@ -135,6 +162,9 @@ NSString*YHZConfig(YHZConfigKey key ){
         if ([value isEqualToString:@"dingtalk"]) {
             [dict setObject:@[_dingField.stringValue] forKey:@"CFBundleURLSchemes"];
         }
+        if ([value isEqualToString:@"tencent"]) {
+            [dict setObject:@[_qqField.stringValue] forKey:@"CFBundleURLSchemes"];
+        }
         
     }
     NSLog(@"%@",info);
@@ -142,12 +172,51 @@ NSString*YHZConfig(YHZConfigKey key ){
     
     [info writeToFile:infoPath atomically:YES];
         
-    
+    [self runSTPrivilegedTask];
     
     
 }
+
+- (IBAction)runSTPrivilegedTask{
+    
+    STPrivilegedTask *privilegedTask = [[STPrivilegedTask alloc] init];
+    
+    NSString*action=[[NSBundle mainBundle]pathForResource:@"action" ofType:@"sh"];
+    NSString *launchPath = action;
+    NSString*content=[[NSBundle mainBundle]pathForResource:@"content" ofType:@"txt"];
+    NSString* Contentsjson = [[NSBundle mainBundle]pathForResource:@"Contents" ofType:@"json"];
+    
+    [privilegedTask setLaunchPath:launchPath];
+    [privilegedTask setArguments:@[_settingPath,_projectPath,content,Contentsjson]];
+    [privilegedTask setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
+    
+    //set it off
+    OSStatus err = [privilegedTask launch];
+    if (err != errAuthorizationSuccess) {
+        if (err == errAuthorizationCanceled) {
+            NSLog(@"User cancelled");
+            return;
+        }  else {
+            NSLog(@"Something went wrong: %d", (int)err);
+            // For error codes, see http://www.opensource.apple.com/source/libsecurity_authorization/libsecurity_authorization-36329/lib/Authorization.h
+        }
+    }
+    
+    [privilegedTask waitUntilExit];
+    
+    // Success!  Now, start monitoring output file handle for data
+    NSFileHandle *readHandle = [privilegedTask outputFileHandle];
+    NSData *outputData = [readHandle readDataToEndOfFile];
+    NSString *outputString = [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
+    [self.outputTextField setString:outputString];
+    
+    NSString *exitStr = [NSString stringWithFormat:@"Exit status: %d", privilegedTask.terminationStatus];
+    [self.exitStatusTextField setStringValue:exitStr];
+}
+
+
 -(void)showSettingInfoZ{
-    NSString*settingPath =   [_settingPath stringByAppendingPathComponent:@"setting.plist"];
+    NSString*settingPath =   [_settingPath stringByAppendingPathComponent:@"YHZConfig.plist"];
     if ([[NSFileManager defaultManager]fileExistsAtPath:settingPath]) {
         NSMutableDictionary *settingDict = [NSMutableDictionary dictionaryWithContentsOfFile:settingPath];
         _chineseField.stringValue = settingDict[YHZConfig(_chineseField.tag)];
@@ -156,6 +225,7 @@ NSString*YHZConfig(YHZConfigKey key ){
         _dingField.stringValue = settingDict[YHZConfig(_dingField.tag)];
         _versionField.stringValue = settingDict[YHZConfig(_versionField.tag)];
         _copyrightField.stringValue = settingDict[YHZConfig(_copyrightField.tag)];
+        _qqField.stringValue = settingDict[YHZConfig(_qqField.tag)];
         
         [_wxSegment setSelectedSegment:[settingDict[YHZConfig(_chineseField.tag) ]integerValue]];
         [_oemSegment setSelectedSegment:[settingDict[YHZConfig(_oemSegment.tag) ]integerValue]];
@@ -166,7 +236,7 @@ NSString*YHZConfig(YHZConfigKey key ){
 
 -(void)getDataAndShow{
     if ((_projectPath != nil && _projectPath.length > 0)&&(_settingPath != nil && _settingPath.length > 0)) {
-        NSString*settingPath =   [_settingPath stringByAppendingPathComponent:@"setting.plist"];
+        NSString*settingPath =   [_settingPath stringByAppendingPathComponent:@"YHZConfig.plist"];
         if ([[NSFileManager defaultManager]fileExistsAtPath:settingPath]) {
             NSMutableDictionary *settingDict = [NSMutableDictionary dictionaryWithContentsOfFile:settingPath];
                 _chineseField.stringValue = settingDict[YHZConfig(_chineseField.tag)];
@@ -176,9 +246,11 @@ NSString*YHZConfig(YHZConfigKey key ){
                _versionField.stringValue = settingDict[YHZConfig(_versionField.tag)];
                _copyrightField.stringValue = settingDict[YHZConfig(_copyrightField.tag)];
             
+                _qqField.stringValue = settingDict[YHZConfig(_qqField.tag)];
                [_wxSegment setSelectedSegment:[settingDict[YHZConfig(_chineseField.tag) ]integerValue]];
                [_oemSegment setSelectedSegment:[settingDict[YHZConfig(_oemSegment.tag) ]integerValue]];
                 [_innerSegment setSelectedSegment:[settingDict[YHZConfig(_innerSegment.tag) ]integerValue]];
+            
         }else{
             
             NSString *infoPath = [_projectPath stringByAppendingString:@"/Cloudoc2/Info.plist"];
@@ -194,7 +266,9 @@ NSString*YHZConfig(YHZConfigKey key ){
                 if ([value isEqualToString:@"dingtalk"]) {
                     _dingField.stringValue =[dict[@"CFBundleURLSchemes"]firstObject];
                 }
-                
+                if ([value isEqualToString:@"tencent"]) {
+                    _qqField.stringValue =[dict[@"CFBundleURLSchemes"]firstObject];
+                }
                 
             }
             

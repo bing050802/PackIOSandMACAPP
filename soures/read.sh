@@ -58,7 +58,7 @@ ouputPath(){
     if [ -n "$outputPath" ];then
         imageOuputPath=$outputPath
     else
-        imageOuputPath="$imagePath/images"
+        imageOuputPath="$imagePath/AppIcon_2.appiconset"
         mkdir $imageOuputPath
 
     fi
@@ -72,6 +72,7 @@ createImages(){
     local imagePath=$(dirname $imageFile)
     local path=$(ouputPath $imagePath $outputPath)
     echo 输出目录:$path
+    chmod 777 $path
     echo createImagesinputFile:$inputFile
     imageWithContents $imageFile $path $inputFile
 }

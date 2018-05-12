@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6347D21D20A57DD80051944A /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347D21B20A57DD80051944A /* STPrivilegedTask.m */; };
-		6347D22020A57E9C0051944A /* content.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6347D21F20A57E9C0051944A /* content.txt */; };
-		6347D22220A57EA30051944A /* read.sh in Resources */ = {isa = PBXBuildFile; fileRef = 6347D22120A57EA30051944A /* read.sh */; };
+		63A3857020A715F700C9C493 /* action.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856B20A715F500C9C493 /* action.sh */; };
+		63A3857120A715F700C9C493 /* read.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856D20A715F600C9C493 /* read.sh */; };
+		63A3857220A715F700C9C493 /* copySource.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856F20A715F600C9C493 /* copySource.sh */; };
 		F42EA3F120499D760047D070 /* unlocked.png in Resources */ = {isa = PBXBuildFile; fileRef = F42EA3F020499D760047D070 /* unlocked.png */; };
 		F47D65BE1EC3535D0000ABAE /* script.pl in Resources */ = {isa = PBXBuildFile; fileRef = F47D65BD1EC3535D0000ABAE /* script.pl */; };
 		F4C19A711BD1963900F411BD /* script.sh in Resources */ = {isa = PBXBuildFile; fileRef = F4C19A701BD1963900F411BD /* script.sh */; };
@@ -22,8 +23,11 @@
 /* Begin PBXFileReference section */
 		6347D21B20A57DD80051944A /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
 		6347D21C20A57DD80051944A /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
-		6347D21F20A57E9C0051944A /* content.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = content.txt; sourceTree = "<group>"; };
-		6347D22120A57EA30051944A /* read.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = read.sh; sourceTree = "<group>"; };
+		63A3856B20A715F500C9C493 /* action.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = action.sh; sourceTree = "<group>"; };
+		63A3856C20A715F600C9C493 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		63A3856D20A715F600C9C493 /* read.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = read.sh; sourceTree = "<group>"; };
+		63A3856E20A715F600C9C493 /* content.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = content.txt; sourceTree = "<group>"; };
+		63A3856F20A715F600C9C493 /* copySource.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = copySource.sh; sourceTree = "<group>"; };
 		F42EA3F020499D760047D070 /* unlocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlocked.png; sourceTree = "<group>"; };
 		F47D65BD1EC3535D0000ABAE /* script.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = script.pl; sourceTree = "<group>"; };
 		F4C19A701BD1963900F411BD /* script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = script.sh; sourceTree = "<group>"; };
@@ -50,8 +54,11 @@
 		6347D21E20A57E890051944A /* soures */ = {
 			isa = PBXGroup;
 			children = (
-				6347D22120A57EA30051944A /* read.sh */,
-				6347D21F20A57E9C0051944A /* content.txt */,
+				63A3856B20A715F500C9C493 /* action.sh */,
+				63A3856F20A715F600C9C493 /* copySource.sh */,
+				63A3856D20A715F600C9C493 /* read.sh */,
+				63A3856C20A715F600C9C493 /* Contents.json */,
+				63A3856E20A715F600C9C493 /* content.txt */,
 			);
 			path = soures;
 			sourceTree = "<group>";
@@ -166,13 +173,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6347D22020A57E9C0051944A /* content.txt in Resources */,
 				F47D65BE1EC3535D0000ABAE /* script.pl in Resources */,
+				63A3857020A715F700C9C493 /* action.sh in Resources */,
 				F42EA3F120499D760047D070 /* unlocked.png in Resources */,
+				63A3857220A715F700C9C493 /* copySource.sh in Resources */,
 				F4F103801B5166CF00BCAD40 /* lock-icon.icns in Resources */,
 				F4C19A711BD1963900F411BD /* script.sh in Resources */,
+				63A3857120A715F700C9C493 /* read.sh in Resources */,
 				F4F103651B5155A200BCAD40 /* MainMenu.xib in Resources */,
-				6347D22220A57EA30051944A /* read.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
