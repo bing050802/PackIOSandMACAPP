@@ -105,16 +105,47 @@ replaceConfigPlist(){
     echo sucesss? $?
 }
 
+copyFiles(){
+    local settingPath
+    local projectPath
+
+
+}
+replaceAPPName(){
+    local settingPath
+    local projectPath
+
+    Config_chinese=$(/usr/libexec/PlistBuddy -c "Print YHZConfig_Chinese" "${settingPath}/YHZConfig.plist")
+    echo $Config_chinese
+    infoPlist_dpath=$projectPath'/Cloudoc2/zh-Hans.lproj/InfoPlist.strings'
+    : > $infoPlist_dpath
+    echo "$infoPlist_dpath cleaned up."
+    echo $infoPlist_dpath
+    echo $Config_chinese  > $infoPlist_dpath
+
+    Config_English=$(/usr/libexec/PlistBuddy -c "Print YHZConfig_English" "${settingPath}/YHZConfig.plist")
+
+    echo "修改英文appName"
+    infoPlist_dpath=$projectPath'/Cloudoc2/en.lproj/InfoPlist.strings'
+    : > $infoPlist_dpath
+    echo "$infoPlist_dpath cleaned up."
+    echo $infoPlist_dpath
+    echo $Config_English  > $infoPlist_dpath
+
+}
+
+
 main(){
 
     cp -f $ContentsjsonPath $SETTINGPATH/AppIcon_2.appiconset
+
 
 
     copyappiconset $SETTINGPATH $PROJECTPATH
     copyLogo $SETTINGPATH $PROJECTPATH
     replaceInfoplist $SETTINGPATH $PROJECTPATH
     replaceConfigPlist $SETTINGPATH $PROJECTPATH
-
+    replaceAPPName $SETTINGPATH $PROJECTPATH
 #    imagePath=$SETTINGPATH/AppIcon_2.appiconset
 #    imageDistinationPath=$PROJECTPATH/Cloudoc2/NEWYHZ.xcassets
 #
