@@ -92,16 +92,28 @@ done
 
 }
 
+replaceInfoplist(){
+    local infoplist=$1/Info.plist
+    local projectplist=$2/Cloudoc2/Info.plist
+    cp -f $infoplist $projectplist
+    echo sucesss? $?
+}
+replaceConfigPlist(){
+    local infoplist=$1/YHZConfig.plist
+    local projectplist=$2/Cloudoc2/YHZConfig.plist
+    cp -f $infoplist $projectplist
+    echo sucesss? $?
+}
 
 main(){
 
     cp -f $ContentsjsonPath $SETTINGPATH/AppIcon_2.appiconset
 
+
     copyappiconset $SETTINGPATH $PROJECTPATH
-
-
     copyLogo $SETTINGPATH $PROJECTPATH
-
+    replaceInfoplist $SETTINGPATH $PROJECTPATH
+    replaceConfigPlist $SETTINGPATH $PROJECTPATH
 
 #    imagePath=$SETTINGPATH/AppIcon_2.appiconset
 #    imageDistinationPath=$PROJECTPATH/Cloudoc2/NEWYHZ.xcassets
