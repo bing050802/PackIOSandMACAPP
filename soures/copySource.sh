@@ -96,12 +96,14 @@ replaceInfoplist(){
     local infoplist=$1/Info.plist
     local projectplist=$2/Cloudoc2/Info.plist
     cp -f $infoplist $projectplist
-    echo sucesss? $?
+    echo $projectplist
+    echo replaceInfoplist sucesss? $?
 }
 replaceConfigPlist(){
     local infoplist=$1/YHZConfig.plist
     local projectplist=$2/Cloudoc2/YHZConfig.plist
     cp -f $infoplist $projectplist
+    echo $projectplist
     echo sucesss? $?
 }
 
@@ -112,16 +114,15 @@ copyFiles(){
 
 }
 replaceAPPName(){
-    local settingPath
-    local projectPath
+    local settingPath=$1
+    local projectPath=$2
 
     Config_chinese=$(/usr/libexec/PlistBuddy -c "Print YHZConfig_Chinese" "${settingPath}/YHZConfig.plist")
     echo $Config_chinese
     infoPlist_dpath=$projectPath'/Cloudoc2/zh-Hans.lproj/InfoPlist.strings'
     : > $infoPlist_dpath
     echo "$infoPlist_dpath cleaned up."
-    echo $infoPlist_dpath
-    echo $Config_chinese  > $infoPlist_dpath
+    echo "CFBundleDisplayName =\"${Config_chinese}\";"  > $infoPlist_dpath
 
     Config_English=$(/usr/libexec/PlistBuddy -c "Print YHZConfig_English" "${settingPath}/YHZConfig.plist")
 
@@ -129,8 +130,7 @@ replaceAPPName(){
     infoPlist_dpath=$projectPath'/Cloudoc2/en.lproj/InfoPlist.strings'
     : > $infoPlist_dpath
     echo "$infoPlist_dpath cleaned up."
-    echo $infoPlist_dpath
-    echo $Config_English  > $infoPlist_dpath
+    echo "CFBundleDisplayName =\"$Config_English\";"  > $infoPlist_dpath
 
 }
 
