@@ -35,8 +35,9 @@ buildArchive(){
     archive -project ${project_path}/${project_name}.xcodeproj \
     -scheme ${scheme_name} \
     -configuration ${development_mode} \
-    -archivePath $archivePath \
-    build | xcpretty -r json-compilation-database -o logPath
+    -archivePath $archivePath
+#\
+#    build | xcpretty -r json-compilation-database -o logPath
 
     echo '///--------'
     echo '/// 编译完成'
