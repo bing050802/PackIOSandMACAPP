@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6323DB9E20AA6398008A8873 /* productIPA.sh in Resources */ = {isa = PBXBuildFile; fileRef = 6323DB9D20AA6389008A8873 /* productIPA.sh */; };
 		6347D21D20A57DD80051944A /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347D21B20A57DD80051944A /* STPrivilegedTask.m */; };
 		63A3857020A715F700C9C493 /* action.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856B20A715F500C9C493 /* action.sh */; };
 		63A3857120A715F700C9C493 /* read.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856D20A715F600C9C493 /* read.sh */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6323DB9D20AA6389008A8873 /* productIPA.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = productIPA.sh; sourceTree = "<group>"; };
 		6347D21B20A57DD80051944A /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
 		6347D21C20A57DD80051944A /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
 		63A3856B20A715F500C9C493 /* action.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = action.sh; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				63A3856D20A715F600C9C493 /* read.sh */,
 				63A3856C20A715F600C9C493 /* Contents.json */,
 				63A3856E20A715F600C9C493 /* content.txt */,
+				6323DB9D20AA6389008A8873 /* productIPA.sh */,
 			);
 			path = soures;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6323DB9E20AA6398008A8873 /* productIPA.sh in Resources */,
 				63A3857320A7190D00C9C493 /* Contents.json in Resources */,
 				63A3857420A7190D00C9C493 /* content.txt in Resources */,
 				F47D65BE1EC3535D0000ABAE /* script.pl in Resources */,
