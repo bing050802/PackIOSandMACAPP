@@ -354,7 +354,7 @@
             </items>
         </menu>
         <window title="PrivilegedTaskExample" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="PrivilegedTaskExample" animationBehavior="default" tabbingMode="disallowed" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="526" y="329" width="1027" height="768"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <value key="minSize" type="size" width="1024" height="1024"/>
