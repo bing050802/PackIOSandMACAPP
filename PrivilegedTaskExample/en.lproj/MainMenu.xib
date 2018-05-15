@@ -721,6 +721,17 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                             <action selector="selectBtnClick:" target="Voe-Tx-rLC" id="xVM-dW-Dmk"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" misplaced="YES" tag="5" id="APm-nF-LMP">
+                        <rect key="frame" x="787" y="285" width="226" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="打包" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ke6-wl-tDz">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="selectBtnClick:" target="Voe-Tx-rLC" id="yFz-v6-FgO"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <point key="canvasLocation" x="794.5" y="604"/>

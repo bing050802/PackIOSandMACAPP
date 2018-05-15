@@ -99,7 +99,48 @@ NSString*YHZConfig(YHZConfigKey key ){
         [self reset];
         
     }
+    if(tag == 5){
+        [self archive];
+        
+    }
     
+}
+-(void)archive{
+    
+    STPrivilegedTask *privilegedTask = [[STPrivilegedTask alloc] init];
+    
+    NSString*action=[[NSBundle mainBundle]pathForResource:@"productIPA" ofType:@"sh"];
+    NSString *launchPath = action;
+
+       NSString* exportPath = [[NSBundle mainBundle]pathForResource:@"exportTest" ofType:@"plist"];
+    
+    [privilegedTask setLaunchPath:launchPath];
+    [privilegedTask setArguments:@[_settingPath,_projectPath,exportPath]];
+    
+    [privilegedTask setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
+    
+    //set it off
+    OSStatus err = [privilegedTask launch];
+    if (err != errAuthorizationSuccess) {
+        if (err == errAuthorizationCanceled) {
+            NSLog(@"User cancelled");
+            return;
+        }  else {
+            NSLog(@"Something went wrong: %d", (int)err);
+            // For error codes, see http://www.opensource.apple.com/source/libsecurity_authorization/libsecurity_authorization-36329/lib/Authorization.h
+        }
+    }
+    
+    [privilegedTask waitUntilExit];
+    
+    // Success!  Now, start monitoring output file handle for data
+    NSFileHandle *readHandle = [privilegedTask outputFileHandle];
+    NSData *outputData = [readHandle readDataToEndOfFile];
+    NSString *outputString = [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
+    [self.outputTextField setString:outputString];
+    
+    NSString *exitStr = [NSString stringWithFormat:@"Exit status: %d", privilegedTask.terminationStatus];
+    [self.exitStatusTextField setStringValue:exitStr];
 }
 -(void)reset{
     _settingPath = nil;
@@ -186,9 +227,10 @@ NSString*YHZConfig(YHZConfigKey key ){
     NSString *launchPath = action;
     NSString*content=[[NSBundle mainBundle]pathForResource:@"content" ofType:@"txt"];
     NSString* Contentsjson = [[NSBundle mainBundle]pathForResource:@"Contents" ofType:@"json"];
+        NSString* exportPath = [[NSBundle mainBundle]pathForResource:@"exportTest" ofType:@"plist"];
     
     [privilegedTask setLaunchPath:launchPath];
-    [privilegedTask setArguments:@[_settingPath,_projectPath,content,Contentsjson]];
+    [privilegedTask setArguments:@[_settingPath,_projectPath,content,Contentsjson,exportPath]];
     
     [privilegedTask setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
     
