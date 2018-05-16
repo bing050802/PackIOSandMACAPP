@@ -84,7 +84,7 @@ main(){
     local archiveName="${name}(${version})"
     local archivePath="${SETTINGPATH}/archivePath/archive${today}/${archiveName}.xcarchive"
 
-    local exportIpaPath=${SETTINGPATH}/archivePath/archive${today}
+    local exportIpaPath=${SETTINGPATH}/archivePath/ipa${today}
     local exportIpaPathName=${archiveName}.ipa
 
     buildArchive $PROJECTPATH $PROJECT_NAME $SCHEME_NAME $DEVELOP_MODE $archivePath
