@@ -93,6 +93,8 @@ NSString*YHZConfig(YHZConfigKey key ){
     
     if (tag == 3) {
         [self outputSetting];
+        [self runSTPrivilegedTask];
+        
     }
     
     if(tag == 4){
@@ -103,7 +105,10 @@ NSString*YHZConfig(YHZConfigKey key ){
         [self archive];
         
     }
-    
+    if(tag == 6){
+          [self outputSetting];
+        
+    }
 }
 -(void)archive{
     
@@ -177,10 +182,14 @@ NSString*YHZConfig(YHZConfigKey key ){
 
       [dict setObject:_versionField.stringValue forKey:YHZConfig(_versionField.tag)];
       [dict setObject:_copyrightField.stringValue forKey:YHZConfig(_copyrightField.tag)];
-      [dict setObject:@"1106228075" forKey:YHZConfig(110)];
+
+      [dict setObject:_qqField.stringValue forKey:YHZConfig(_qqField.tag)];
     
-        [dict writeToFile:setting atomically:YES];
-     NSString *infoPath = [_settingPath stringByAppendingPathComponent:@"Info.plist"];
+    [dict writeToFile:setting atomically:YES];
+    
+    
+    
+        NSString *infoPath = [_settingPath stringByAppendingPathComponent:@"Info.plist"];
     
     if (![[NSFileManager defaultManager]fileExistsAtPath:infoPath]) {
         NSError *copyError;
@@ -215,8 +224,7 @@ NSString*YHZConfig(YHZConfigKey key ){
     
     [info writeToFile:infoPath atomically:YES];
         
-    [self runSTPrivilegedTask];
-    
+  
     
 }
 
@@ -228,7 +236,7 @@ NSString*YHZConfig(YHZConfigKey key ){
     NSString *launchPath = action;
     NSString*content=[[NSBundle mainBundle]pathForResource:@"content" ofType:@"txt"];
     NSString* Contentsjson = [[NSBundle mainBundle]pathForResource:@"Contents" ofType:@"json"];
-        NSString* exportPath = [[NSBundle mainBundle]pathForResource:@"exportTest" ofType:@"plist"];
+    NSString* exportPath = [[NSBundle mainBundle]pathForResource:@"exportTest" ofType:@"plist"];
     
     [privilegedTask setLaunchPath:launchPath];
     [privilegedTask setArguments:@[_settingPath,_projectPath,content,Contentsjson,exportPath]];
@@ -313,7 +321,7 @@ NSString*YHZConfig(YHZConfigKey key ){
                     _dingField.stringValue =[dict[@"CFBundleURLSchemes"]firstObject];
                 }
                 if ([value isEqualToString:@"tencent"]) {
-                    _qqField.stringValue =[dict[@"CFBundleURLSchemes"]firstObject];
+                    _qqField.stringValue =[[dict[@"CFBundleURLSchemes"]firstObject]substringFromIndex:7];
                 }
                 
             }

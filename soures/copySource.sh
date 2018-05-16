@@ -81,7 +81,7 @@ copyLogo(){
 
 
     for i in {2,3};do
-        dpath="$d""/icon_logo_2_cloudoc_2@"$i"x.png"
+        dpath="$enlprojPath""/icon_logo_2_cloudoc_2@"$i"x.png"
         echo $dpath
         spath="${imagePath}/logo_en@${i}x.png"
         cp -f $spath $enlprojPath

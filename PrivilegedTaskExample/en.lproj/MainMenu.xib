@@ -645,7 +645,7 @@ DQ
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="ngm-gj-p6e">
                         <rect key="frame" x="6" y="461" width="190" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="oem or nomale" id="iTP-KP-9I7">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="nomale or  oem" id="iTP-KP-9I7">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -730,6 +730,17 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                         </buttonCell>
                         <connections>
                             <action selector="selectBtnClick:" target="Voe-Tx-rLC" id="yFz-v6-FgO"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" misplaced="YES" tag="6" id="hnd-wc-Dcs">
+                        <rect key="frame" x="787" y="332" width="226" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="生成配置信息" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UkI-CH-p3T">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="selectBtnClick:" target="Voe-Tx-rLC" id="3aM-9C-UB4"/>
                         </connections>
                     </button>
                 </subviews>
