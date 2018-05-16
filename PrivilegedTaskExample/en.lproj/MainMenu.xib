@@ -355,12 +355,12 @@
         </menu>
         <window title="PrivilegedTaskExample" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="PrivilegedTaskExample" animationBehavior="default" tabbingMode="disallowed" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="526" y="329" width="1027" height="768"/>
+            <rect key="contentRect" x="526" y="329" width="1027" height="1024"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <value key="minSize" type="size" width="1024" height="1024"/>
             <value key="maxSize" type="size" width="1024" height="1024"/>
             <view key="contentView" misplaced="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="1027" height="768"/>
+                <rect key="frame" x="0.0" y="0.0" width="1027" height="1024"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" misplaced="YES" id="mzG-KW-No6">
@@ -378,17 +378,17 @@ DQ
                         </connections>
                     </button>
                     <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="Nau-vy-mdp">
-                        <rect key="frame" x="20" y="61" width="987" height="119"/>
+                        <rect key="frame" x="20" y="61" width="987" height="363"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="dcv-QH-Kc5">
-                            <rect key="frame" x="1" y="1" width="970" height="117"/>
+                            <rect key="frame" x="1" y="1" width="970" height="361"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="Ied-BF-cE1">
-                                    <rect key="frame" x="0.0" y="0.0" width="955" height="117"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="955" height="361"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="970" height="117"/>
+                                    <size key="minSize" width="970" height="361"/>
                                     <size key="maxSize" width="1132" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 </textView>
@@ -400,12 +400,12 @@ DQ
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="NM1-YK-j8z">
-                            <rect key="frame" x="971" y="1" width="15" height="117"/>
+                            <rect key="frame" x="971" y="1" width="15" height="361"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
                     <textField verticalHuggingPriority="750" misplaced="YES" id="uMP-L5-Jvs">
-                        <rect key="frame" x="125" y="195" width="882" height="22"/>
+                        <rect key="frame" x="125" y="451" width="882" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="/bin/sh script.sh" drawsBackground="YES" id="zx1-Oz-Kv4">
                             <font key="font" metaFont="system"/>
@@ -414,7 +414,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="vcF-sD-5Di">
-                        <rect key="frame" x="18" y="198" width="72" height="17"/>
+                        <rect key="frame" x="18" y="454" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Command:" id="Pfb-aZ-YQu">
                             <font key="font" metaFont="system"/>
@@ -443,7 +443,7 @@ DQ
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="cH7-3k-gvg">
-                        <rect key="frame" x="6" y="731" width="72" height="17"/>
+                        <rect key="frame" x="6" y="987" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="配置目录" id="TH6-aI-86R">
                             <font key="font" metaFont="system"/>
@@ -452,7 +452,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" misplaced="YES" id="3i9-eS-0ix">
-                        <rect key="frame" x="96" y="728" width="807" height="22"/>
+                        <rect key="frame" x="96" y="984" width="759" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="配置路径" drawsBackground="YES" id="5uF-Ll-WqD">
                             <font key="font" metaFont="system"/>
@@ -461,7 +461,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="oXx-Tz-6bO">
-                        <rect key="frame" x="6" y="690" width="72" height="17"/>
+                        <rect key="frame" x="6" y="946" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="工程目录" id="kRY-2c-qXK">
                             <font key="font" metaFont="system"/>
@@ -470,7 +470,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" misplaced="YES" id="nTN-pv-O8G">
-                        <rect key="frame" x="96" y="690" width="807" height="22"/>
+                        <rect key="frame" x="96" y="946" width="759" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="工程路径" drawsBackground="YES" id="n4L-Zb-y8T">
                             <font key="font" metaFont="system"/>
@@ -479,7 +479,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" misplaced="YES" tag="1" id="KSD-LZ-s8V">
-                        <rect key="frame" x="905" y="724" width="115" height="32"/>
+                        <rect key="frame" x="867" y="980" width="153" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="选择" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="083-dB-7ma">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -490,7 +490,7 @@ DQ
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" misplaced="YES" tag="2" id="3lc-cG-Amd">
-                        <rect key="frame" x="905" y="683" width="115" height="32"/>
+                        <rect key="frame" x="876" y="939" width="144" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="选择" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1w4-f1-cMU">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -501,7 +501,7 @@ DQ
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="x1N-hZ-8Z5">
-                        <rect key="frame" x="6" y="607" width="72" height="17"/>
+                        <rect key="frame" x="6" y="863" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="英文名" id="t0q-27-lQb">
                             <font key="font" metaFont="system"/>
@@ -510,7 +510,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Yxh-S7-XAh">
-                        <rect key="frame" x="6" y="565" width="72" height="17"/>
+                        <rect key="frame" x="6" y="821" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="微信Id" id="ip4-IB-S9J">
                             <font key="font" metaFont="system"/>
@@ -519,7 +519,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" misplaced="YES" tag="103" id="hbL-v7-d7X">
-                        <rect key="frame" x="96" y="563" width="211" height="22"/>
+                        <rect key="frame" x="96" y="819" width="211" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="/bin/sh script.sh" drawsBackground="YES" id="3Zg-FV-vPW">
                             <font key="font" metaFont="system"/>
@@ -528,7 +528,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Xzu-En-AHB">
-                        <rect key="frame" x="6" y="530" width="72" height="17"/>
+                        <rect key="frame" x="6" y="786" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="钉钉id" id="q8x-zC-IaH">
                             <font key="font" metaFont="system"/>
@@ -537,7 +537,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" misplaced="YES" tag="104" id="LvU-UY-vcG">
-                        <rect key="frame" x="96" y="528" width="211" height="22"/>
+                        <rect key="frame" x="96" y="784" width="211" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="/bin/sh script.sh" drawsBackground="YES" id="y1y-aD-XhB">
                             <font key="font" metaFont="system"/>
@@ -546,7 +546,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Ove-sw-101">
-                        <rect key="frame" x="386" y="646" width="63" height="17"/>
+                        <rect key="frame" x="374" y="899" width="63" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="版本号" id="VXh-wK-KMq">
                             <font key="font" metaFont="system"/>
@@ -555,7 +555,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="NsG-j3-isn">
-                        <rect key="frame" x="6" y="646" width="72" height="17"/>
+                        <rect key="frame" x="6" y="902" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="中文名" id="W43-qg-ieq">
                             <font key="font" metaFont="system"/>
@@ -564,17 +564,17 @@ DQ
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="qKY-fz-YKh">
-                        <rect key="frame" x="388" y="303" width="256" height="256"/>
+                        <rect key="frame" x="388" y="559" width="256" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Oqr-cV-ZoG"/>
                     </imageView>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="1qZ-JX-Osu">
-                        <rect key="frame" x="712" y="316" width="251" height="234"/>
+                        <rect key="frame" x="712" y="572" width="251" height="234"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="aUz-em-bcF"/>
                     </imageView>
                     <textField verticalHuggingPriority="750" misplaced="YES" tag="101" id="u9m-IN-V4p">
-                        <rect key="frame" x="96" y="643" width="211" height="22"/>
+                        <rect key="frame" x="96" y="899" width="211" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="云盒子" drawsBackground="YES" id="2IR-pS-Pje">
                             <font key="font" metaFont="system"/>
@@ -582,17 +582,8 @@ DQ
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" misplaced="YES" tag="108" id="5rT-qG-aJ0">
-                        <rect key="frame" x="470" y="643" width="211" height="22"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="yav-a0-63y">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField verticalHuggingPriority="750" misplaced="YES" tag="102" id="KYg-pR-rMk">
-                        <rect key="frame" x="96" y="605" width="211" height="22"/>
+                        <rect key="frame" x="96" y="861" width="211" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="ClouDoc" drawsBackground="YES" id="ksM-UH-VAP">
                             <font key="font" metaFont="system"/>
@@ -601,7 +592,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <segmentedControl verticalHuggingPriority="750" misplaced="YES" tag="105" id="8x7-h3-zol">
-                        <rect key="frame" x="220" y="493" width="70" height="24"/>
+                        <rect key="frame" x="104" y="751" width="70" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="sPX-ly-hXX">
                             <font key="font" metaFont="system"/>
@@ -612,7 +603,7 @@ DQ
                         </segmentedCell>
                     </segmentedControl>
                     <segmentedControl verticalHuggingPriority="750" misplaced="YES" tag="106" id="Vbz-bJ-w8h">
-                        <rect key="frame" x="220" y="457" width="70" height="24"/>
+                        <rect key="frame" x="104" y="710" width="70" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="XLr-lK-Hoo">
                             <font key="font" metaFont="system"/>
@@ -623,7 +614,7 @@ DQ
                         </segmentedCell>
                     </segmentedControl>
                     <segmentedControl verticalHuggingPriority="750" misplaced="YES" tag="107" id="HcG-2g-OUX">
-                        <rect key="frame" x="221" y="419" width="70" height="24"/>
+                        <rect key="frame" x="104" y="675" width="70" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="BpF-1A-WEk">
                             <font key="font" metaFont="system"/>
@@ -634,34 +625,34 @@ DQ
                         </segmentedCell>
                     </segmentedControl>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="x21-Uy-mFM">
-                        <rect key="frame" x="10" y="497" width="164" height="17"/>
+                        <rect key="frame" x="6" y="755" width="164" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="微信 or 钉钉" id="kl9-RK-AGz">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="微信 " id="kl9-RK-AGz">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="ngm-gj-p6e">
-                        <rect key="frame" x="6" y="461" width="190" height="17"/>
+                        <rect key="frame" x="6" y="717" width="190" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="nomale or  oem" id="iTP-KP-9I7">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="nomale " id="iTP-KP-9I7">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="cej-ko-KWl">
-                        <rect key="frame" x="6" y="421" width="195" height="17"/>
+                        <rect key="frame" x="6" y="678" width="195" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="inner master server or overseas" id="y0g-aa-fyB">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="inner" id="y0g-aa-fyB">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="30a-st-bRy">
-                        <rect key="frame" x="386" y="599" width="63" height="17"/>
+                        <rect key="frame" x="374" y="866" width="63" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="copyright" id="ATF-Xb-YBz">
                             <font key="font" metaFont="system"/>
@@ -670,7 +661,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" misplaced="YES" tag="109" id="ubJ-Id-xtb">
-                        <rect key="frame" x="470" y="597" width="418" height="22"/>
+                        <rect key="frame" x="461" y="858" width="394" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="p5e-UI-hdO">
                             <font key="font" metaFont="system"/>
@@ -682,7 +673,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" misplaced="YES" tag="3" id="Jez-xo-egw">
-                        <rect key="frame" x="787" y="230" width="226" height="32"/>
+                        <rect key="frame" x="433" y="511" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="生成配置信息并配置工程" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y1R-Yd-k1a">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -693,7 +684,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="AfG-RF-fJM">
-                        <rect key="frame" x="386" y="574" width="63" height="17"/>
+                        <rect key="frame" x="374" y="830" width="63" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="qqid" id="X9H-vy-emo">
                             <font key="font" metaFont="system"/>
@@ -702,7 +693,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" misplaced="YES" tag="110" id="jFZ-1U-UPv">
-                        <rect key="frame" x="470" y="569" width="418" height="22"/>
+                        <rect key="frame" x="461" y="825" width="394" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="3Be-12-45p">
                             <font key="font" metaFont="system"/>
@@ -711,7 +702,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" misplaced="YES" tag="4" id="bg7-kT-yoZ">
-                        <rect key="frame" x="534" y="230" width="226" height="32"/>
+                        <rect key="frame" x="706" y="511" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="清除" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="70q-hu-chw">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -722,7 +713,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" misplaced="YES" tag="5" id="APm-nF-LMP">
-                        <rect key="frame" x="787" y="285" width="226" height="32"/>
+                        <rect key="frame" x="706" y="577" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="打包" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ke6-wl-tDz">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -733,7 +724,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" misplaced="YES" tag="6" id="hnd-wc-Dcs">
-                        <rect key="frame" x="787" y="332" width="226" height="32"/>
+                        <rect key="frame" x="433" y="577" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="生成配置信息" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UkI-CH-p3T">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -743,6 +734,42 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                             <action selector="selectBtnClick:" target="Voe-Tx-rLC" id="3aM-9C-UB4"/>
                         </connections>
                     </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="NxA-VV-5Y9">
+                        <rect key="frame" x="209" y="755" width="164" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="钉钉" id="u2S-qW-Vy3">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="iUm-cb-lL3">
+                        <rect key="frame" x="209" y="717" width="164" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="oem" id="mA8-Ox-6d0">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="WYU-Ja-vLP">
+                        <rect key="frame" x="209" y="682" width="164" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="overseas" id="T1m-iY-uTA">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" misplaced="YES" tag="108" id="5rT-qG-aJ0">
+                        <rect key="frame" x="461" y="894" width="389" height="22"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="yav-a0-63y">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="794.5" y="604"/>
