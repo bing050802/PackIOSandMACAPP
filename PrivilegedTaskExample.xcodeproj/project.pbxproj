@@ -33,6 +33,7 @@
 		6323DBA020AA7CC7008A8873 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6323DBA120AA7CC8008A8873 /* exportTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportTest.plist; sourceTree = "<group>"; };
 		6323DBA220AA7CC8008A8873 /* exportAppstore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportAppstore.plist; sourceTree = "<group>"; };
+		632C96DB20ABE2FB00B3C447 /* easy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = easy.sh; sourceTree = "<group>"; };
 		6347D21B20A57DD80051944A /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
 		6347D21C20A57DD80051944A /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
 		63A3856B20A715F500C9C493 /* action.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = action.sh; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 				6323DBA120AA7CC8008A8873 /* exportTest.plist */,
 				6323DBA020AA7CC7008A8873 /* README.md */,
 				6323DB9F20AA7CC7008A8873 /* shell.sh */,
+				632C96DB20ABE2FB00B3C447 /* easy.sh */,
 			);
 			path = soures;
 			sourceTree = "<group>";
