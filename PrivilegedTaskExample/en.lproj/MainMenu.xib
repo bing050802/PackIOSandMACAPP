@@ -625,7 +625,7 @@ DQ
                         </segmentedCell>
                     </segmentedControl>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="x21-Uy-mFM">
-                        <rect key="frame" x="6" y="755" width="164" height="17"/>
+                        <rect key="frame" x="6" y="755" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="微信 " id="kl9-RK-AGz">
                             <font key="font" metaFont="system"/>
@@ -634,7 +634,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="ngm-gj-p6e">
-                        <rect key="frame" x="6" y="717" width="190" height="17"/>
+                        <rect key="frame" x="6" y="717" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="nomale " id="iTP-KP-9I7">
                             <font key="font" metaFont="system"/>
@@ -643,7 +643,7 @@ DQ
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="cej-ko-KWl">
-                        <rect key="frame" x="6" y="678" width="195" height="17"/>
+                        <rect key="frame" x="6" y="678" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="inner" id="y0g-aa-fyB">
                             <font key="font" metaFont="system"/>
@@ -666,7 +666,7 @@ DQ
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="p5e-UI-hdO">
                             <font key="font" metaFont="system"/>
                             <string key="title" base64-UTF8="YES">
-Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
+Q29weXJpZ2h0IAPCqSAyMDE4IHdhdmV0b3BjbG91ZCBJbmMuA
 </string>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -743,17 +743,8 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="iUm-cb-lL3">
-                        <rect key="frame" x="209" y="717" width="164" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="oem" id="mA8-Ox-6d0">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="WYU-Ja-vLP">
-                        <rect key="frame" x="209" y="682" width="164" height="17"/>
+                        <rect key="frame" x="209" y="681" width="164" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="overseas" id="T1m-iY-uTA">
                             <font key="font" metaFont="system"/>
@@ -764,10 +755,19 @@ Q29weXJpZ2h0IAPCqSAyMDE4IENsb3VEb2MgSW5jLg
                     <textField verticalHuggingPriority="750" misplaced="YES" tag="108" id="5rT-qG-aJ0">
                         <rect key="frame" x="461" y="894" width="389" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="yav-a0-63y">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="4.0" drawsBackground="YES" id="yav-a0-63y">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="iUm-cb-lL3">
+                        <rect key="frame" x="209" y="717" width="164" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="oem" id="mA8-Ox-6d0">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                 </subviews>
