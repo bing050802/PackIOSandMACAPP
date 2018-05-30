@@ -636,7 +636,7 @@ DQ
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="ngm-gj-p6e">
                         <rect key="frame" x="6" y="717" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="nomale " id="iTP-KP-9I7">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="公司通用" id="iTP-KP-9I7">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -645,7 +645,7 @@ DQ
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="cej-ko-KWl">
                         <rect key="frame" x="6" y="678" width="72" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="inner" id="y0g-aa-fyB">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="通用主控" id="y0g-aa-fyB">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -746,7 +746,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IHdhdmV0b3BjbG91ZCBJbmMuA
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="WYU-Ja-vLP">
                         <rect key="frame" x="209" y="681" width="164" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="overseas" id="T1m-iY-uTA">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="海外主控" id="T1m-iY-uTA">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -764,7 +764,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IHdhdmV0b3BjbG91ZCBJbmMuA
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="iUm-cb-lL3">
                         <rect key="frame" x="209" y="717" width="164" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="oem" id="mA8-Ox-6d0">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OEM，没有演示服务器" id="mA8-Ox-6d0">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
