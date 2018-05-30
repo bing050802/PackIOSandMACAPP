@@ -672,7 +672,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IHdhdmV0b3BjbG91ZCBJbmMuA
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" misplaced="YES" tag="3" id="Jez-xo-egw">
+                    <button hidden="YES" verticalHuggingPriority="750" misplaced="YES" tag="3" id="Jez-xo-egw">
                         <rect key="frame" x="433" y="511" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="生成配置信息并配置工程" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y1R-Yd-k1a">
@@ -701,7 +701,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IHdhdmV0b3BjbG91ZCBJbmMuA
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" misplaced="YES" tag="4" id="bg7-kT-yoZ">
+                    <button hidden="YES" verticalHuggingPriority="750" misplaced="YES" tag="4" id="bg7-kT-yoZ">
                         <rect key="frame" x="706" y="511" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="清除" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="70q-hu-chw">
@@ -712,7 +712,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IHdhdmV0b3BjbG91ZCBJbmMuA
                             <action selector="selectBtnClick:" target="Voe-Tx-rLC" id="xVM-dW-Dmk"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" misplaced="YES" tag="5" id="APm-nF-LMP">
+                    <button hidden="YES" verticalHuggingPriority="750" misplaced="YES" tag="5" id="APm-nF-LMP">
                         <rect key="frame" x="706" y="577" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="打包" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ke6-wl-tDz">
