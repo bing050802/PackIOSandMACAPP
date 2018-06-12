@@ -13,6 +13,7 @@
 		6323DBA520AA7CC9008A8873 /* exportTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6323DBA120AA7CC8008A8873 /* exportTest.plist */; };
 		6323DBA620AA7CC9008A8873 /* exportAppstore.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6323DBA220AA7CC8008A8873 /* exportAppstore.plist */; };
 		6347D21D20A57DD80051944A /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347D21B20A57DD80051944A /* STPrivilegedTask.m */; };
+		634AFA3520CAC9CC00C1D4EF /* pack.sh in Resources */ = {isa = PBXBuildFile; fileRef = 634AFA3420CAC9CC00C1D4EF /* pack.sh */; };
 		63A3857020A715F700C9C493 /* action.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856B20A715F500C9C493 /* action.sh */; };
 		63A3857120A715F700C9C493 /* read.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856D20A715F600C9C493 /* read.sh */; };
 		63A3857220A715F700C9C493 /* copySource.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856F20A715F600C9C493 /* copySource.sh */; };
@@ -37,6 +38,7 @@
 		633AF86020C937AC0046C2E5 /* buildMac.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildMac.sh; sourceTree = "<group>"; };
 		6347D21B20A57DD80051944A /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
 		6347D21C20A57DD80051944A /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
+		634AFA3420CAC9CC00C1D4EF /* pack.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = pack.sh; sourceTree = "<group>"; };
 		63A3856B20A715F500C9C493 /* action.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = action.sh; sourceTree = "<group>"; };
 		63A3856C20A715F600C9C493 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		63A3856D20A715F600C9C493 /* read.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = read.sh; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		6347D21E20A57E890051944A /* soures */ = {
 			isa = PBXGroup;
 			children = (
+				634AFA3420CAC9CC00C1D4EF /* pack.sh */,
 				63A3856B20A715F500C9C493 /* action.sh */,
 				63A3856F20A715F600C9C493 /* copySource.sh */,
 				63A3856D20A715F600C9C493 /* read.sh */,
@@ -209,6 +212,7 @@
 				63A3857120A715F700C9C493 /* read.sh in Resources */,
 				F4F103651B5155A200BCAD40 /* MainMenu.xib in Resources */,
 				6323DBA620AA7CC9008A8873 /* exportAppstore.plist in Resources */,
+				634AFA3520CAC9CC00C1D4EF /* pack.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
