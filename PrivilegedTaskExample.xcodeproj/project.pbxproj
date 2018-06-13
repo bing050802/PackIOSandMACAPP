@@ -35,6 +35,7 @@
 		6323DBA020AA7CC7008A8873 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6323DBA120AA7CC8008A8873 /* exportTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportTest.plist; sourceTree = "<group>"; };
 		6323DBA220AA7CC8008A8873 /* exportAppstore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportAppstore.plist; sourceTree = "<group>"; };
+		632A056720D0B5CD0046C7DD /* project.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = project.py; sourceTree = "<group>"; };
 		632C96DB20ABE2FB00B3C447 /* easy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = easy.sh; sourceTree = "<group>"; };
 		633AF86020C937AC0046C2E5 /* buildMac.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildMac.sh; sourceTree = "<group>"; };
 		6347D21B20A57DD80051944A /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 				6323DB9F20AA7CC7008A8873 /* shell.sh */,
 				632C96DB20ABE2FB00B3C447 /* easy.sh */,
 				633AF86020C937AC0046C2E5 /* buildMac.sh */,
+				632A056720D0B5CD0046C7DD /* project.py */,
 			);
 			path = soures;
 			sourceTree = "<group>";

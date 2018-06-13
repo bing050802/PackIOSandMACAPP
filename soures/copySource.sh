@@ -52,6 +52,8 @@ copyLogo(){
     local baseDiretory=$distinationPath'/Cloudoc2/Base.lproj'
     local hansDiretory=$distinationPath'/Cloudoc2/zh-Hans.lproj'
 
+
+
     logo_en=$(find $imagePath -name $logo_en2 -print)
     echo logo_en$logo_en
     if [  x"$logo_en"="x" ];then
@@ -68,8 +70,14 @@ copyLogo(){
 
     icon_logo=icon_logo_2_cloudoc_2_en_${today}
     slogan=slogan_1_en_${today}
-    python xib.py $imagePath/YHZLaunchScreen.xib $icon_logo $slogan
-    cp -f $imagePath/YHZLaunchScreen2.xib $distinationPath/Cloudoc2/YHZLaunchScreen.xib
+    Copyright=$(/usr/libexec/PlistBuddy -c "Print YHZConfig_Copyright" "${imagePath}/YHZConfig.plist")
+    echo $Copyright
+    python project.py "${imagePath}/project.pbxproj" "$icon_logo" "$slogan"
+    python xib.py "${imagePath}/YHZLaunchScreen.xib" "$icon_logo" "$slogan" "${Copyright}"
+    rm -f "$imagePath/YHZLaunchScreen.xib"
+    rm -f "${imagePath}/project.pbxproj"
+    mv -f "$imagePath/YHZLaunchScreen2.xib" "$distinationPath/Cloudoc2/YHZLaunchScreen.xib"
+    mv -f "${imagePath}/project2.pbxproj" "$distinationPath/Cloudoc2.xcodeproj/project.pbxproj"
     echo "!!!!!!!!!!!!!!!!!!!!!!!!!!"
     find $enlprojPath -name "icon_logo_2_cloudoc_2_en*.png" -print -exec rm -f {} \;
     find $enlprojPath -name "slogan*.png" -print -exec rm -f {} \;
@@ -161,6 +169,7 @@ main(){
 
     cp -f $ContentsjsonPath $SETTINGPATH/AppIcon_2.appiconset
     cp -f $PROJECTPATH/Cloudoc2/YHZLaunchScreen.xib $SETTINGPATH
+    cp -f "$PROJECTPATH/Cloudoc2.xcodeproj/project.pbxproj" $SETTINGPATH
 
 
     copyappiconset $SETTINGPATH $PROJECTPATH
