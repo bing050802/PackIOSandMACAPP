@@ -19,6 +19,7 @@
 		63A3857220A715F700C9C493 /* copySource.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856F20A715F600C9C493 /* copySource.sh */; };
 		63A3857320A7190D00C9C493 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856C20A715F600C9C493 /* Contents.json */; };
 		63A3857420A7190D00C9C493 /* content.txt in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856E20A715F600C9C493 /* content.txt */; };
+		63BDF2DD20CFC5DE003863B0 /* xib.py in Resources */ = {isa = PBXBuildFile; fileRef = 63BDF2DC20CFC5DD003863B0 /* xib.py */; };
 		F42EA3F120499D760047D070 /* unlocked.png in Resources */ = {isa = PBXBuildFile; fileRef = F42EA3F020499D760047D070 /* unlocked.png */; };
 		F47D65BE1EC3535D0000ABAE /* script.pl in Resources */ = {isa = PBXBuildFile; fileRef = F47D65BD1EC3535D0000ABAE /* script.pl */; };
 		F4C19A711BD1963900F411BD /* script.sh in Resources */ = {isa = PBXBuildFile; fileRef = F4C19A701BD1963900F411BD /* script.sh */; };
@@ -44,6 +45,7 @@
 		63A3856D20A715F600C9C493 /* read.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = read.sh; sourceTree = "<group>"; };
 		63A3856E20A715F600C9C493 /* content.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = content.txt; sourceTree = "<group>"; };
 		63A3856F20A715F600C9C493 /* copySource.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = copySource.sh; sourceTree = "<group>"; };
+		63BDF2DC20CFC5DD003863B0 /* xib.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = xib.py; sourceTree = "<group>"; };
 		F42EA3F020499D760047D070 /* unlocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlocked.png; sourceTree = "<group>"; };
 		F47D65BD1EC3535D0000ABAE /* script.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = script.pl; sourceTree = "<group>"; };
 		F4C19A701BD1963900F411BD /* script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = script.sh; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		6347D21E20A57E890051944A /* soures */ = {
 			isa = PBXGroup;
 			children = (
+				63BDF2DC20CFC5DD003863B0 /* xib.py */,
 				634AFA3420CAC9CC00C1D4EF /* pack.sh */,
 				63A3856B20A715F500C9C493 /* action.sh */,
 				63A3856F20A715F600C9C493 /* copySource.sh */,
@@ -205,6 +208,7 @@
 				6323DBA420AA7CC9008A8873 /* README.md in Resources */,
 				63A3857020A715F700C9C493 /* action.sh in Resources */,
 				6323DBA320AA7CC9008A8873 /* shell.sh in Resources */,
+				63BDF2DD20CFC5DE003863B0 /* xib.py in Resources */,
 				F42EA3F120499D760047D070 /* unlocked.png in Resources */,
 				63A3857220A715F700C9C493 /* copySource.sh in Resources */,
 				F4F103801B5166CF00BCAD40 /* lock-icon.icns in Resources */,

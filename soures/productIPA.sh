@@ -31,6 +31,7 @@ buildArchive(){
     echo '///-----------'
     echo '/// 正在编译工程:'${development_mode}
     echo '///-----------'
+    clean
     xcodebuild \
     archive -project ${project_path}/${project_name}.xcodeproj \
     -scheme ${scheme_name} \

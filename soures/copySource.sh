@@ -36,8 +36,11 @@ getNameAndCopy(){
    local imagePath=$1
     local imageDistinationPath=$2
    local pattern=$3
+    local newName=$4
 
-    find $imageDistinationPath -name $pattern -print -exec cp -f $imagePath '{}' \;
+    name=$(find $imageDistinationPath -name $pattern -print)
+    rm -f imageDistinationPath/name
+    cp -f $imagePath $imageDistinationPath/$newName
 
 }
 
@@ -61,10 +64,29 @@ copyLogo(){
         cp -f $imagePath/$logo3 $imagePath/$logo_en3
     fi
 
-    getNameAndCopy "$imagePath/$logo_en2" $enlprojPath "icon_logo_2_cloudoc_2_en*@2x.png"
-    getNameAndCopy "$imagePath/$logo_en3" $enlprojPath "icon_logo_2_cloudoc_2_en*@3x.png"
-    getNameAndCopy "$imagePath/$slogan2" $enlprojPath "slogan*@2x.png"
-    getNameAndCopy "$imagePath/$slogan3" $enlprojPath "slogan*@3x.png"
+    local today=`date +%Y%m%d%H%M%S`
+
+    icon_logo=icon_logo_2_cloudoc_2_en_${today}
+    slogan=slogan_1_en_${today}
+    python xib.py $imagePath/YHZLaunchScreen.xib $icon_logo $slogan
+    cp -f $imagePath/YHZLaunchScreen2.xib $distinationPath/Cloudoc2/YHZLaunchScreen.xib
+    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    find $enlprojPath -name "icon_logo_2_cloudoc_2_en*.png" -print -exec rm -f {} \;
+    find $enlprojPath -name "slogan*.png" -print -exec rm -f {} \;
+
+    for i in {2,3};do
+        spath="${imagePath}/logo@${i}x.png"
+        cp -f $spath "${enlprojPath}/${icon_logo}@${i}x.png"
+        sloganpath="${imagePath}/slogan@${i}x.png"
+        cp -f $sloganpath $enlprojPath//${slogan}@${i}x.png
+        echo $spath
+        echo $sloganpath
+        echo $i
+    done
+
+
+
+
 
 
     for d in {$baseDiretory,$hansDiretory};do
@@ -81,14 +103,14 @@ copyLogo(){
 
 
     for i in {2,3};do
-        dpath="$enlprojPath""/icon_logo_2_cloudoc_2@"$i"x.png"
+        dpath="$enlprojPath/icon_logo_2_cloudoc_2@${i}x.png"
         echo $dpath
         spath="${imagePath}/logo_en@${i}x.png"
-        cp -f $spath $enlprojPath
+        cp -f $spath $dpath
         echo $spath
         echo $enlprojPath
         echo $i
-done
+    done
 
 }
 
@@ -138,7 +160,7 @@ replaceAPPName(){
 main(){
 
     cp -f $ContentsjsonPath $SETTINGPATH/AppIcon_2.appiconset
-
+    cp -f $PROJECTPATH/Cloudoc2/YHZLaunchScreen.xib $SETTINGPATH
 
 
     copyappiconset $SETTINGPATH $PROJECTPATH

@@ -13,7 +13,7 @@ exporpplist=./exportTest.plist
 main(){
     ./read.sh $contentPath  $SETTINGPATH/cloud_ico.png
     ./copySource.sh $SETTINGPATH $PROJECTPATH $contentjsonPath
-   ./productIPA.sh $SETTINGPATH $PROJECTPATH $exporpplist
+#   ./productIPA.sh $SETTINGPATH $PROJECTPATH $exporpplist
 
 }
 main
