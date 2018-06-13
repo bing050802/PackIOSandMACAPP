@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,11 +36,11 @@
         </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="PrivilegedTaskExample" id="1Xt-HY-uBw">
+                <menuItem title="AutoPack" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="PrivilegedTaskExample" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="AutoPack" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About PrivilegedTaskExample" id="5kV-Vb-QxS">
+                            <menuItem title="About AutoPack" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -53,7 +52,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide PrivilegedTaskExample" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide AutoPack" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -71,7 +70,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit PrivilegedTaskExample" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit AutoPack" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -353,7 +352,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="PrivilegedTaskExample" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="PrivilegedTaskExample" animationBehavior="default" tabbingMode="disallowed" id="QvC-M9-y7g">
+        <window title="AutoPack" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="PrivilegedTaskExample" animationBehavior="default" tabbingMode="disallowed" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="526" y="329" width="1027" height="1024"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
@@ -382,7 +381,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="dcv-QH-Kc5">
                             <rect key="frame" x="1" y="1" width="970" height="361"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="Ied-BF-cE1">
                                     <rect key="frame" x="0.0" y="0.0" width="940" height="361"/>

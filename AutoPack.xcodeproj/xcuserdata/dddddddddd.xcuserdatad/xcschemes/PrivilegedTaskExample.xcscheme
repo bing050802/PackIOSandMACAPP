@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4F103561B5155A200BCAD40"
-               BuildableName = "PrivilegedTaskExample.app"
-               BlueprintName = "PrivilegedTaskExample"
-               ReferencedContainer = "container:PrivilegedTaskExample.xcodeproj">
+               BuildableName = "AutoPack.app"
+               BlueprintName = "AutoPack"
+               ReferencedContainer = "container:AutoPack.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4F103561B5155A200BCAD40"
-            BuildableName = "PrivilegedTaskExample.app"
-            BlueprintName = "PrivilegedTaskExample"
-            ReferencedContainer = "container:PrivilegedTaskExample.xcodeproj">
+            BuildableName = "AutoPack.app"
+            BlueprintName = "AutoPack"
+            ReferencedContainer = "container:AutoPack.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4F103561B5155A200BCAD40"
-            BuildableName = "PrivilegedTaskExample.app"
-            BlueprintName = "PrivilegedTaskExample"
-            ReferencedContainer = "container:PrivilegedTaskExample.xcodeproj">
+            BuildableName = "AutoPack.app"
+            BlueprintName = "AutoPack"
+            ReferencedContainer = "container:AutoPack.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4F103561B5155A200BCAD40"
-            BuildableName = "PrivilegedTaskExample.app"
-            BlueprintName = "PrivilegedTaskExample"
-            ReferencedContainer = "container:PrivilegedTaskExample.xcodeproj">
+            BuildableName = "AutoPack.app"
+            BlueprintName = "AutoPack"
+            ReferencedContainer = "container:AutoPack.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -88,6 +88,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "pack"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

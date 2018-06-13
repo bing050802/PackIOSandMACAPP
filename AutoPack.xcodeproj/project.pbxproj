@@ -51,7 +51,7 @@
 		F47D65BD1EC3535D0000ABAE /* script.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = script.pl; sourceTree = "<group>"; };
 		F4C19A701BD1963900F411BD /* script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = script.sh; sourceTree = "<group>"; };
 		F4E5E4001EE2953E0072EACE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		F4F103571B5155A200BCAD40 /* PrivilegedTaskExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivilegedTaskExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F103571B5155A200BCAD40 /* AutoPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F1035B1B5155A200BCAD40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4F1035C1B5155A200BCAD40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4F1035D1B5155A200BCAD40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		F4F103581B5155A200BCAD40 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4F103571B5155A200BCAD40 /* PrivilegedTaskExample.app */,
+				F4F103571B5155A200BCAD40 /* AutoPack.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,9 +147,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4F103561B5155A200BCAD40 /* PrivilegedTaskExample */ = {
+		F4F103561B5155A200BCAD40 /* AutoPack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4F103741B5155A200BCAD40 /* Build configuration list for PBXNativeTarget "PrivilegedTaskExample" */;
+			buildConfigurationList = F4F103741B5155A200BCAD40 /* Build configuration list for PBXNativeTarget "AutoPack" */;
 			buildPhases = (
 				F4F103531B5155A200BCAD40 /* Sources */,
 				F4F103541B5155A200BCAD40 /* Frameworks */,
@@ -160,9 +160,9 @@
 			);
 			dependencies = (
 			);
-			name = PrivilegedTaskExample;
+			name = AutoPack;
 			productName = PrivilegedTaskExample;
-			productReference = F4F103571B5155A200BCAD40 /* PrivilegedTaskExample.app */;
+			productReference = F4F103571B5155A200BCAD40 /* AutoPack.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -179,7 +179,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F4F103521B5155A200BCAD40 /* Build configuration list for PBXProject "PrivilegedTaskExample" */;
+			buildConfigurationList = F4F103521B5155A200BCAD40 /* Build configuration list for PBXProject "AutoPack" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -192,7 +192,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4F103561B5155A200BCAD40 /* PrivilegedTaskExample */,
+				F4F103561B5155A200BCAD40 /* AutoPack */,
 			);
 		};
 /* End PBXProject section */
@@ -390,7 +390,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F4F103521B5155A200BCAD40 /* Build configuration list for PBXProject "PrivilegedTaskExample" */ = {
+		F4F103521B5155A200BCAD40 /* Build configuration list for PBXProject "AutoPack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4F103721B5155A200BCAD40 /* Debug */,
@@ -399,7 +399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4F103741B5155A200BCAD40 /* Build configuration list for PBXNativeTarget "PrivilegedTaskExample" */ = {
+		F4F103741B5155A200BCAD40 /* Build configuration list for PBXNativeTarget "AutoPack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4F103751B5155A200BCAD40 /* Debug */,
