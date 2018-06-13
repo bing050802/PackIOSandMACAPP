@@ -12,6 +12,21 @@
 		6323DBA420AA7CC9008A8873 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6323DBA020AA7CC7008A8873 /* README.md */; };
 		6323DBA520AA7CC9008A8873 /* exportTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6323DBA120AA7CC8008A8873 /* exportTest.plist */; };
 		6323DBA620AA7CC9008A8873 /* exportAppstore.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6323DBA220AA7CC8008A8873 /* exportAppstore.plist */; };
+		632A057B20D0BEAE0046C7DD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 632A056920D0BEAD0046C7DD /* .gitignore */; };
+		632A057D20D0BEAE0046C7DD /* create-dmg.builder in Resources */ = {isa = PBXBuildFile; fileRef = 632A056D20D0BEAD0046C7DD /* create-dmg.builder */; };
+		632A057E20D0BEAE0046C7DD /* create-dmg in Resources */ = {isa = PBXBuildFile; fileRef = 632A056E20D0BEAD0046C7DD /* create-dmg */; };
+		632A057F20D0BEAE0046C7DD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 632A056F20D0BEAD0046C7DD /* LICENSE */; };
+		632A058020D0BEAE0046C7DD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 632A057020D0BEAD0046C7DD /* README.md */; };
+		632A058120D0BEAE0046C7DD /* sample in Resources */ = {isa = PBXBuildFile; fileRef = 632A057120D0BEAD0046C7DD /* sample */; };
+		632A058220D0BEAE0046C7DD /* cloudoc_icon_108.png in Resources */ = {isa = PBXBuildFile; fileRef = 632A057320D0BEAD0046C7DD /* cloudoc_icon_108.png */; };
+		632A058320D0BEAE0046C7DD /* cloudoc_icon_108@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 632A057420D0BEAD0046C7DD /* cloudoc_icon_108@2x.png */; };
+		632A058420D0BEAE0046C7DD /* cloudoc_icon_96.png in Resources */ = {isa = PBXBuildFile; fileRef = 632A057520D0BEAD0046C7DD /* cloudoc_icon_96.png */; };
+		632A058520D0BEAE0046C7DD /* cloudoc_icon_96@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 632A057620D0BEAD0046C7DD /* cloudoc_icon_96@2x.png */; };
+		632A058620D0BEAE0046C7DD /* dmg-license.py in Resources */ = {isa = PBXBuildFile; fileRef = 632A057720D0BEAD0046C7DD /* dmg-license.py */; };
+		632A058720D0BEAE0046C7DD /* Install_bac.png in Resources */ = {isa = PBXBuildFile; fileRef = 632A057820D0BEAD0046C7DD /* Install_bac.png */; };
+		632A058820D0BEAE0046C7DD /* Install_bac@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 632A057920D0BEAD0046C7DD /* Install_bac@2x.png */; };
+		632A058920D0BEAE0046C7DD /* template.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 632A057A20D0BEAD0046C7DD /* template.applescript */; };
+		632A058A20D0BECA0046C7DD /* buildMac.sh in Resources */ = {isa = PBXBuildFile; fileRef = 633AF86020C937AC0046C2E5 /* buildMac.sh */; };
 		6347D21D20A57DD80051944A /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347D21B20A57DD80051944A /* STPrivilegedTask.m */; };
 		634AFA3520CAC9CC00C1D4EF /* pack.sh in Resources */ = {isa = PBXBuildFile; fileRef = 634AFA3420CAC9CC00C1D4EF /* pack.sh */; };
 		63A3857020A715F700C9C493 /* action.sh in Resources */ = {isa = PBXBuildFile; fileRef = 63A3856B20A715F500C9C493 /* action.sh */; };
@@ -36,6 +51,20 @@
 		6323DBA120AA7CC8008A8873 /* exportTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportTest.plist; sourceTree = "<group>"; };
 		6323DBA220AA7CC8008A8873 /* exportAppstore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportAppstore.plist; sourceTree = "<group>"; };
 		632A056720D0B5CD0046C7DD /* project.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = project.py; sourceTree = "<group>"; };
+		632A056920D0BEAD0046C7DD /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		632A056D20D0BEAD0046C7DD /* create-dmg.builder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "create-dmg.builder"; sourceTree = "<group>"; };
+		632A056E20D0BEAD0046C7DD /* create-dmg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "create-dmg"; sourceTree = "<group>"; };
+		632A056F20D0BEAD0046C7DD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		632A057020D0BEAD0046C7DD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		632A057120D0BEAD0046C7DD /* sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = sample; sourceTree = "<group>"; };
+		632A057320D0BEAD0046C7DD /* cloudoc_icon_108.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudoc_icon_108.png; sourceTree = "<group>"; };
+		632A057420D0BEAD0046C7DD /* cloudoc_icon_108@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloudoc_icon_108@2x.png"; sourceTree = "<group>"; };
+		632A057520D0BEAD0046C7DD /* cloudoc_icon_96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudoc_icon_96.png; sourceTree = "<group>"; };
+		632A057620D0BEAD0046C7DD /* cloudoc_icon_96@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloudoc_icon_96@2x.png"; sourceTree = "<group>"; };
+		632A057720D0BEAD0046C7DD /* dmg-license.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "dmg-license.py"; sourceTree = "<group>"; };
+		632A057820D0BEAD0046C7DD /* Install_bac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Install_bac.png; sourceTree = "<group>"; };
+		632A057920D0BEAD0046C7DD /* Install_bac@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Install_bac@2x.png"; sourceTree = "<group>"; };
+		632A057A20D0BEAD0046C7DD /* template.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = template.applescript; sourceTree = "<group>"; };
 		632C96DB20ABE2FB00B3C447 /* easy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = easy.sh; sourceTree = "<group>"; };
 		633AF86020C937AC0046C2E5 /* buildMac.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildMac.sh; sourceTree = "<group>"; };
 		6347D21B20A57DD80051944A /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
@@ -70,6 +99,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		632A056820D0BEAD0046C7DD /* buildMac */ = {
+			isa = PBXGroup;
+			children = (
+				633AF86020C937AC0046C2E5 /* buildMac.sh */,
+				632A056920D0BEAD0046C7DD /* .gitignore */,
+				632A056C20D0BEAD0046C7DD /* builder */,
+				632A056E20D0BEAD0046C7DD /* create-dmg */,
+				632A056F20D0BEAD0046C7DD /* LICENSE */,
+				632A057020D0BEAD0046C7DD /* README.md */,
+				632A057120D0BEAD0046C7DD /* sample */,
+				632A057220D0BEAD0046C7DD /* support */,
+			);
+			path = buildMac;
+			sourceTree = "<group>";
+		};
+		632A056C20D0BEAD0046C7DD /* builder */ = {
+			isa = PBXGroup;
+			children = (
+				632A056D20D0BEAD0046C7DD /* create-dmg.builder */,
+			);
+			path = builder;
+			sourceTree = "<group>";
+		};
+		632A057220D0BEAD0046C7DD /* support */ = {
+			isa = PBXGroup;
+			children = (
+				632A057320D0BEAD0046C7DD /* cloudoc_icon_108.png */,
+				632A057420D0BEAD0046C7DD /* cloudoc_icon_108@2x.png */,
+				632A057520D0BEAD0046C7DD /* cloudoc_icon_96.png */,
+				632A057620D0BEAD0046C7DD /* cloudoc_icon_96@2x.png */,
+				632A057720D0BEAD0046C7DD /* dmg-license.py */,
+				632A057820D0BEAD0046C7DD /* Install_bac.png */,
+				632A057920D0BEAD0046C7DD /* Install_bac@2x.png */,
+				632A057A20D0BEAD0046C7DD /* template.applescript */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
 		6347D21E20A57E890051944A /* soures */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +153,8 @@
 				6323DBA020AA7CC7008A8873 /* README.md */,
 				6323DB9F20AA7CC7008A8873 /* shell.sh */,
 				632C96DB20ABE2FB00B3C447 /* easy.sh */,
-				633AF86020C937AC0046C2E5 /* buildMac.sh */,
 				632A056720D0B5CD0046C7DD /* project.py */,
+				632A056820D0BEAD0046C7DD /* buildMac */,
 			);
 			path = soures;
 			sourceTree = "<group>";
@@ -203,21 +270,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				6323DB9E20AA6398008A8873 /* productIPA.sh in Resources */,
+				632A057E20D0BEAE0046C7DD /* create-dmg in Resources */,
+				632A058720D0BEAE0046C7DD /* Install_bac.png in Resources */,
 				63A3857320A7190D00C9C493 /* Contents.json in Resources */,
 				63A3857420A7190D00C9C493 /* content.txt in Resources */,
 				F47D65BE1EC3535D0000ABAE /* script.pl in Resources */,
+				632A057D20D0BEAE0046C7DD /* create-dmg.builder in Resources */,
+				632A058520D0BEAE0046C7DD /* cloudoc_icon_96@2x.png in Resources */,
 				6323DBA520AA7CC9008A8873 /* exportTest.plist in Resources */,
 				6323DBA420AA7CC9008A8873 /* README.md in Resources */,
+				632A058020D0BEAE0046C7DD /* README.md in Resources */,
+				632A058220D0BEAE0046C7DD /* cloudoc_icon_108.png in Resources */,
+				632A058420D0BEAE0046C7DD /* cloudoc_icon_96.png in Resources */,
 				63A3857020A715F700C9C493 /* action.sh in Resources */,
+				632A058820D0BEAE0046C7DD /* Install_bac@2x.png in Resources */,
 				6323DBA320AA7CC9008A8873 /* shell.sh in Resources */,
 				63BDF2DD20CFC5DE003863B0 /* xib.py in Resources */,
 				F42EA3F120499D760047D070 /* unlocked.png in Resources */,
 				63A3857220A715F700C9C493 /* copySource.sh in Resources */,
 				F4F103801B5166CF00BCAD40 /* lock-icon.icns in Resources */,
+				632A058A20D0BECA0046C7DD /* buildMac.sh in Resources */,
+				632A058120D0BEAE0046C7DD /* sample in Resources */,
 				F4C19A711BD1963900F411BD /* script.sh in Resources */,
+				632A058620D0BEAE0046C7DD /* dmg-license.py in Resources */,
+				632A058320D0BEAE0046C7DD /* cloudoc_icon_108@2x.png in Resources */,
+				632A057F20D0BEAE0046C7DD /* LICENSE in Resources */,
 				63A3857120A715F700C9C493 /* read.sh in Resources */,
 				F4F103651B5155A200BCAD40 /* MainMenu.xib in Resources */,
 				6323DBA620AA7CC9008A8873 /* exportAppstore.plist in Resources */,
+				632A057B20D0BEAE0046C7DD /* .gitignore in Resources */,
 				634AFA3520CAC9CC00C1D4EF /* pack.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4F103601B5155A200BCAD40 /* main.m in Sources */,
+				632A058920D0BEAE0046C7DD /* template.applescript in Sources */,
 				F4F1035E1B5155A200BCAD40 /* AppDelegate.m in Sources */,
 				6347D21D20A57DD80051944A /* STPrivilegedTask.m in Sources */,
 			);
