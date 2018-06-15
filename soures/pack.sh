@@ -12,9 +12,12 @@ exporpplist=./exportTest.plist
 main(){
     cp -f $exporpplist $SETTINGPATH
     cp -f $PROJECTPATH/Cloudoc2/YHZConfig.plist $SETTINGPATH
-    local version=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${PROJECTPATH}/Cloudoc2/Info.plist")
-    /usr/libexec/PlistBuddy -c "Set :YHZConfig_Version ${version}" "${SETTINGPATH}/YHZConfig.plist"
-
+    cp -f $PROJECTPATH/Cloudoc2/Info.plist $SETTINGPATH
+#    local version=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${PROJECTPATH}/Cloudoc2/Info.plist")
+    /usr/libexec/PlistBuddy -c "Set :YHZConfig_Version ${Version}" "${SETTINGPATH}/YHZConfig.plist"
+    /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${Version}" "${SETTINGPATH}/Info.plist"
+    /usr/libexec/PlistBuddy -c "Set :CFBundleVersion ${Version}" "${SETTINGPATH}/Info.plist"
+    cp -f "${SETTINGPATH}/Info.plist" "$PROJECTPATH/Cloudoc2/Info.plist"
     ./productIPA.sh $SETTINGPATH $PROJECTPATH "${SETTINGPATH}/exportTest.plist"
 
 }
