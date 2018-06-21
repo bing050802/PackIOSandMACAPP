@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +24,7 @@
                 <outlet property="icon1024" destination="qKY-fz-YKh" id="xqL-6H-8N7"/>
                 <outlet property="innerSegment" destination="HcG-2g-OUX" id="Pqz-w3-xpV"/>
                 <outlet property="logo" destination="1qZ-JX-Osu" id="m8M-cB-b6t"/>
+                <outlet property="nameIdField" destination="SaZ-9v-UxZ" id="DTJ-Rj-1UV"/>
                 <outlet property="oemSegment" destination="Vbz-bJ-w8h" id="fC2-jS-aKR"/>
                 <outlet property="outputTextField" destination="Ied-BF-cE1" id="gNg-AJ-mhL"/>
                 <outlet property="projectField" destination="nTN-pv-O8G" id="W9w-Wd-fbC"/>
@@ -381,7 +383,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="dcv-QH-Kc5">
                             <rect key="frame" x="1" y="1" width="970" height="361"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="Ied-BF-cE1">
                                     <rect key="frame" x="0.0" y="0.0" width="940" height="361"/>
@@ -711,7 +713,7 @@ Q29weXJpZ2h0IAPCqSAyMDE4IHdhdmV0b3BjbG91ZCBJbmMuA
                             <action selector="selectBtnClick:" target="Voe-Tx-rLC" id="xVM-dW-Dmk"/>
                         </connections>
                     </button>
-                    <button hidden="YES" verticalHuggingPriority="750" misplaced="YES" tag="5" id="APm-nF-LMP">
+                    <button verticalHuggingPriority="750" misplaced="YES" tag="5" id="APm-nF-LMP">
                         <rect key="frame" x="706" y="577" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="打包" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ke6-wl-tDz">
@@ -764,6 +766,24 @@ Q29weXJpZ2h0IAPCqSAyMDE4IHdhdmV0b3BjbG91ZCBJbmMuA
                         <rect key="frame" x="209" y="717" width="164" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OEM，没有演示服务器" id="mA8-Ox-6d0">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" misplaced="YES" tag="111" id="SaZ-9v-UxZ">
+                        <rect key="frame" x="461" y="781" width="394" height="22"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="1000ClouDoc" drawsBackground="YES" id="1lP-oA-rbs">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="9i3-TW-SGc">
+                        <rect key="frame" x="374" y="789" width="63" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="YHZNameId" id="r1P-JI-xbw">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

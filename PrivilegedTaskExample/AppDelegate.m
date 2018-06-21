@@ -39,10 +39,11 @@ typedef NS_OPTIONS(NSUInteger, YHZConfigKey) {
     YHZConfig_Version = 108,
     YHZConfig_Copyright = 109,
     YHZConfig_qq = 110,
+    YHZConfig_nameId = 111,
 };
 
 NSString*YHZConfig(YHZConfigKey key ){
-    NSArray *array = @[@"YHZConfig_Chinese",@"YHZConfig_English",@"YHZConfig_weixin",@"YHZConfig_dingding",@"YHZConfig_WXorDing",@"YHZConfig_OEMorNor",@"YHZConfig_InorOverseas",@"YHZConfig_Version",@"YHZConfig_Copyright",@"YHZConfig_qq"];
+    NSArray *array = @[@"YHZConfig_Chinese",@"YHZConfig_English",@"YHZConfig_weixin",@"YHZConfig_dingding",@"YHZConfig_WXorDing",@"YHZConfig_OEMorNor",@"YHZConfig_InorOverseas",@"YHZConfig_Version",@"YHZConfig_Copyright",@"YHZConfig_qq",@"YHZNameId"];
     return array[key - 101];
     
 };
@@ -68,6 +69,7 @@ NSString*YHZConfig(YHZConfigKey key ){
 @property (nonatomic,weak)IBOutlet NSTextField *versionField;
 @property (nonatomic,weak)IBOutlet NSTextField *copyrightField;
 @property (nonatomic,weak)IBOutlet NSTextField *qqField;
+@property (nonatomic,weak)IBOutlet NSTextField *nameIdField;
 @end
 
 @implementation AppDelegate
@@ -114,15 +116,15 @@ NSString*YHZConfig(YHZConfigKey key ){
     
     STPrivilegedTask *privilegedTask = [[STPrivilegedTask alloc] init];
     
-    NSString*action=[[NSBundle mainBundle]pathForResource:@"productIPA" ofType:@"sh"];
+    NSString*action=[[NSBundle mainBundle]pathForResource:@"easy" ofType:@"sh"];
     NSString *launchPath = action;
 
-       NSString* exportPath = [[NSBundle mainBundle]pathForResource:@"exportTest" ofType:@"plist"];
-    
+//       NSString* exportPath = [[NSBundle mainBundle]pathForResource:@"exportTest" ofType:@"plist"];
+//
     [privilegedTask setLaunchPath:launchPath];
-    [privilegedTask setArguments:@[_settingPath,_projectPath,exportPath]];
+    [privilegedTask setArguments:@[_settingPath,_projectPath]];
     
-    [privilegedTask setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
+//    [privilegedTask setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
     
     //set it off
     OSStatus err = [privilegedTask launch];
@@ -184,7 +186,7 @@ NSString*YHZConfig(YHZConfigKey key ){
       [dict setObject:_copyrightField.stringValue forKey:YHZConfig(_copyrightField.tag)];
 
       [dict setObject:_qqField.stringValue forKey:YHZConfig(_qqField.tag)];
-    
+     [dict setObject:_nameIdField.stringValue forKey:YHZConfig(_nameIdField.tag)];
     [dict writeToFile:setting atomically:YES];
     
     
@@ -279,7 +281,7 @@ NSString*YHZConfig(YHZConfigKey key ){
         _versionField.stringValue = settingDict[YHZConfig(_versionField.tag)];
         _copyrightField.stringValue = settingDict[YHZConfig(_copyrightField.tag)];
         _qqField.stringValue = settingDict[YHZConfig(_qqField.tag)];
-        
+          _nameIdField.stringValue = settingDict[YHZConfig(_nameIdField.tag)];
         [_wxSegment setSelectedSegment:[settingDict[YHZConfig(_chineseField.tag) ]integerValue]];
         [_oemSegment setSelectedSegment:[settingDict[YHZConfig(_oemSegment.tag) ]integerValue]];
         [_innerSegment setSelectedSegment:[settingDict[YHZConfig(_innerSegment.tag) ]integerValue]];
