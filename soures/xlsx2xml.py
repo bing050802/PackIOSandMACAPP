@@ -14,7 +14,7 @@ for i in xlsDf.index:
     print(xlsDf['nameId'][i])
     print(xlsDf['程序名'][i])
 str=str+"</show-name>"
-f=open("plist_con.xml","w")
+f=open("plist_conf.xml","w")
 f.write(str)
 f.close()
 
